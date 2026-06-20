@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CHiLL — Computing Hardware & Large Data Lab @ UMass Boston</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ─── Navigation ────────────────────────────────────────────── -->
+<nav class="nav">
+  <div class="nav-inner">
+    <!-- <a class="nav-brand" href="index.html">
+      <div class="nav-brand-logo">CHiLL</div>
+      <span>CHiLL Lab</span>
+    </a> -->
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html#home" class="active">Home</a>
+      <a href="index.html#news">News</a>
+      <a href="index.html#research">Research</a>
+      <a href="index.html#team">Team</a>
+      <a href="index.html#classes">Classes</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="publications.html" class="nav-cv">Publications</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ─── Hero Banner ───────────────────────────────────────────── -->
+<section class="hero" id="home">
+  <!-- Inline SVG background pattern: circuit / data grid -->
+  <svg class="hero-bg-svg" viewBox="0 0 1200 400" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+        <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(0,153,204,0.5)" stroke-width="0.5"/>
+      </pattern>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#grid)"/>
+    <!-- Circuit-like decorative paths -->
+    <g stroke="rgba(0,153,204,0.7)" stroke-width="1.5" fill="none">
+      <path d="M100,80 H200 V160 H360"/>
+      <circle cx="200" cy="80" r="4" fill="rgba(0,153,204,0.7)"/>
+      <circle cx="360" cy="160" r="4" fill="rgba(0,153,204,0.7)"/>
+      <path d="M500,40 V120 H700 V200"/>
+      <circle cx="500" cy="40" r="4" fill="rgba(0,153,204,0.7)"/>
+      <circle cx="700" cy="200" r="4" fill="rgba(0,153,204,0.7)"/>
+      <path d="M900,100 H1050 V60 H1150"/>
+      <circle cx="900" cy="100" r="4" fill="rgba(0,153,204,0.7)"/>
+      <circle cx="1150" cy="60" r="4" fill="rgba(0,153,204,0.7)"/>
+      <path d="M50,280 H180 V320 H340 V260"/>
+      <circle cx="180" cy="280" r="4" fill="rgba(0,153,204,0.7)"/>
+      <circle cx="340" cy="260" r="4" fill="rgba(0,153,204,0.7)"/>
+      <path d="M600,300 H800 V350"/>
+      <circle cx="600" cy="300" r="4" fill="rgba(0,153,204,0.7)"/>
+      <circle cx="800" cy="350" r="4" fill="rgba(0,153,204,0.7)"/>
+    </g>
+    <!-- Icons: tree, database, SSD, FPGA, brain — styled minimal SVG -->
+    <!-- Tree node -->
+    <g transform="translate(80,180)" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" fill="none">
+      <circle cx="40" cy="15" r="6" fill="rgba(255,255,255,0.3)"/>
+      <circle cx="20" cy="45" r="6" fill="rgba(255,255,255,0.3)"/>
+      <circle cx="60" cy="45" r="6" fill="rgba(255,255,255,0.3)"/>
+      <circle cx="10" cy="72" r="5" fill="rgba(255,255,255,0.3)"/>
+      <circle cx="30" cy="72" r="5" fill="rgba(255,255,255,0.3)"/>
+      <line x1="40" y1="21" x2="20" y2="39"/><line x1="40" y1="21" x2="60" y2="39"/>
+      <line x1="20" y1="51" x2="10" y2="67"/><line x1="20" y1="51" x2="30" y2="67"/>
+    </g>
+    <!-- Database cylinders -->
+    <g transform="translate(290,170)" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" fill="rgba(255,255,255,0.08)">
+      <ellipse cx="35" cy="12" rx="35" ry="9"/>
+      <rect x="0" y="12" width="70" height="28"/>
+      <ellipse cx="35" cy="40" rx="35" ry="9"/>
+      <rect x="0" y="40" width="70" height="20"/>
+      <ellipse cx="35" cy="60" rx="35" ry="9"/>
+    </g>
+    <!-- SSD chip -->
+    <g transform="translate(520,175)" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" fill="rgba(255,255,255,0.06)">
+      <rect x="5" y="5" width="70" height="55" rx="4"/>
+      <rect x="18" y="18" width="44" height="28" rx="2"/>
+      <text x="40" y="37" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.4)" font-family="JetBrains Mono,monospace">SSD</text>
+      <line x1="5" y1="18" x2="0" y2="18"/><line x1="5" y1="28" x2="0" y2="28"/>
+      <line x1="5" y1="38" x2="0" y2="38"/><line x1="5" y1="48" x2="0" y2="48"/>
+      <line x1="75" y1="18" x2="80" y2="18"/><line x1="75" y1="28" x2="80" y2="28"/>
+      <line x1="75" y1="38" x2="80" y2="38"/><line x1="75" y1="48" x2="80" y2="48"/>
+    </g>
+    <!-- FPGA -->
+    <g transform="translate(760,170)" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" fill="rgba(255,255,255,0.06)">
+      <rect x="10" y="10" width="70" height="60" rx="4"/>
+      <rect x="22" y="22" width="46" height="36" rx="2"/>
+      <text x="45" y="44" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.4)" font-family="JetBrains Mono,monospace">FPGA</text>
+      <line x1="20" y1="10" x2="20" y2="4"/><line x1="35" y1="10" x2="35" y2="4"/>
+      <line x1="50" y1="10" x2="50" y2="4"/><line x1="65" y1="10" x2="65" y2="4"/>
+      <line x1="20" y1="70" x2="20" y2="76"/><line x1="35" y1="70" x2="35" y2="76"/>
+      <line x1="50" y1="70" x2="50" y2="76"/><line x1="65" y1="70" x2="65" y2="76"/>
+    </g>
+    <!-- Neural/brain icon -->
+    <g transform="translate(1000,175)" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" fill="none">
+      <circle cx="40" cy="35" r="30" fill="rgba(255,255,255,0.05)"/>
+      <path d="M20,35 Q22,20 35,18 Q48,16 52,28 Q60,25 62,38 Q64,50 54,55 Q50,62 40,60 Q30,62 26,55 Q16,50 20,35Z"/>
+      <line x1="40" y1="18" x2="40" y2="52"/>
+      <line x1="20" y1="36" x2="60" y2="36"/>
+      <circle cx="40" cy="30" r="3" fill="rgba(0,153,204,0.6)"/>
+      <circle cx="30" cy="44" r="3" fill="rgba(0,153,204,0.6)"/>
+      <circle cx="50" cy="44" r="3" fill="rgba(0,153,204,0.6)"/>
+    </g>
+  </svg>
+
+  <div class="hero-inner">
+    <div class="hero-text">
+      <div class="hero-sub">Department of Computer Science · UMass Boston</div>
+      <h1><em>C</em>omputing <em>H</em>ardware &amp;&nbsp;<em>L</em>arge Data <em>L</em>ab</h1>
+      <p class="hero-desc">
+        We design hardware-aware data management systems for modern storage devices — building smarter, faster, and more autonomous data systems for the next generation of computing.
+      </p>
+      <div class="hero-chips">
+        <span class="chip">LSM-Trees</span>
+        <span class="chip">ZNS SSDs</span>
+        <span class="chip">CXL Memory</span>
+        <span class="chip">RL for Data Systems</span>
+        <span class="chip">FPGA Co-Design</span>
+        <span class="chip">Bufferpool Management</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Publications ───────────────────────────────────────────────────── -->
+<section class="section" id="publications">
+  <div class="container">
+    <h2 class="section-title">Publications</h2>
+    <div class="container mt-3">
+		  <div class="row">
+		    <div class="col">
+          <ul>
+            <li class="pub-item"> 
+              <p class="mt-5" align="justify">
+              Tianru Zhang, <b>Tarikul Islam Papon</b>, Teona Bagashbili, Salman Toor, Manos Athanassoulis. “ReStore: A Reinforcement Learning Approach for Data Migration in Multi-Tiered Storage”, Proceedings of the ACM SIGMOD Management of Data (PACMMOD), 2026. [<a href='https://dl.acm.org/doi/epdf/10.1145/3802104' target="_blank">Download</a>]
+            </p>
+            </li>
+            <li class="pub-item"> 
+              <p class="mt-3" align="justify">
+              Shadman Saqib Eusuf, Tianru Zhang, Teona Bagashbili, Manos Athanassoulis, <b>Tarikul Islam Papon</b>. “ReStore-in-Action: Adaptive Multi-Tier Storage Management via Intelligent Data Migration Policy”, Proceedings of the VLDB Endowment, 2026. 
+            </p>
+            </li>
+
+            <li class="pub-item"> 
+              <p class="mt-3" align="justify">
+              Farhan S. Chowdhury, Shadman Saqib Eusuf, Subhadeep Sarkar, <b>Tarikul Islam Papon</b>. “ZARC: Re-inventing Zone Allocation for LSMs on ZNS SSD”, Proceedings of the International Workshop on Data Management on New Hardware (DaMoN), 2026. [<a href='pdfs/zarc_damon_cr.pdf' target="_blank">Download</a>]
+            </p>
+            </li>
+
+            <li class="pub-item"> 
+              <p class="mt-3" align="justify">
+              Teona Bagashbili, <b>Tarikul Islam Papon</b>, Manos Athanassoulis. “ACE-in-Action: A Smart DBMS Bufferpool for SSDs”, Proceedings of the ACM SIGMOD Management of Data (PACMMOD), 2025. [<a href='https://dl.acm.org/doi/pdf/10.1145/3722212.3725077'>Download</a>]
+            </p>
+            </li>
+
+            <li class="pub-item"> 
+              <p class="mt-3" align="justify">
+              <b>Tarikul Islam Papon</b>, Taishan Chen, Shuo Zhang, Manos Athanassoulis. “CAVE: Concurrency-Aware Graph Processing on SSDs”, Proceedings of the ACM SIGMOD Management of Data (PACMMOD), 2024. [<a href='pdfs/paper-sigmod24-cave.pdf'>Download</a>]
+            </p>
+            </li>
+
+            <li class="pub-item"> 
+              <p class="mt-3" align="justify">
+              <b>Tarikul Islam Papon</b>, Ju Hyoung Mun, Konstantinos Karatsenidis, Shahin Roozkhosh, Denis Hoornaert, Ahmed Sanaullah, Ulrich Drepper, Renato Mancuso, Manos Athanassoulis. “Effortless Locality on Data Systems Using Relational Fabric”, IEEE Transactions on Knowledge and Data Engineering (TKDE), 2024. [<a href='pdfs/tkde2023_papon.pdf'>Download</a>]
+            </p>
+            </li>
+
+            <li class="pub-item"> 
+              <p class="mt-3" align="justify">
+              <b>Tarikul Islam Papon</b>. “Enhancing Data Systems Performance by Exploiting SSD Concurrency & Asymmetry”, Proceedings of the IEEE International Conference on Data Engineering (ICDE) PhD Symposium, 2024. [<a href='pdfs/paper-icde24-phd-symposium.pdf'>Download</a>]
+            </p>
+            </li>
+
+            <li class="pub-item"> 
+              <p class="mt-3" align="justify">
+              (Under Review) <b>Tarikul Islam Papon</b>. “Designing SSD-Conscious Data Systems”, HPTS Workshop, 2024. [<a href='pdfs/paper_hpts24_submission.pdf'>Download</a>]
+            </p>
+            </li>
+
+            <li class="pub-item"> 
+              <p class="mt-3" align="justify">
+              <b>Tarikul Islam Papon</b>, Abdul Wasay. “Silhouette: Toward Performance-Conscious and Transferable CPU Embeddings”, Workshop on ML for Systems at the Conference on Neural Information Processing Systems (NeurIPS), 2023. [<a href='https://mlforsystems.org/assets/papers/neurips2023/paper25.pdf'>Download</a>]
+            </p>
+            </li>
+
+            <li class="pub-item"> 
+              <p class="mt-3" align="justify">
+              Ju Hyoung Mun, Konstantinos Karatsenidis, <b>Tarikul Islam Papon</b>,  Shahin Roozkhosh, Denis Hoornaert, Ulrich Drepper, Ahmed Sanaullah, Renato Mancuso, Manos Athanassoulis. “On-the-fly Data Transformation in Action”, Proceedings of the VLDB Endowment, 2023. [<a href='https://www.vldb.org/pvldb/vol16/p3950-mun.pdf'>Download</a>]
+            </p>
+            </li>
+
+            <li class="pub-item"> 
+              <p class="mt-3" align="justify">
+              Subhadeep Sarkar, <b>Tarikul Islam Papon</b>, Dimitris Staratzis, Zichen Zhu, Manos Athanassoulis. “Enabling Timely and Persistent Deletion in LSM-Engines”, ACM Transactions on Database Systems (TODS), 2023. [<a href='https://dl.acm.org/doi/pdf/10.1145/3599724'>Download</a>]
+            </p>
+            </li>
+
+            <li class="pub-item"> 
+              <p class="mt-3" align="justify">
+              <b>Tarikul Islam Papon</b>, Manos Athanassoulis. “ACEing the Bufferpool Management Paradigm for Modern Storage Devices”, Proceedings of the IEEE International Conference on Data Engineering (ICDE), 2023. [<a href='pdfs/icde23-papon.pdf'>Download</a>]
+            </p>
+            </li>
+            
+            <li class="pub-item"> 
+              <p class="mt-3" align="justify">
+              <b>Tarikul Islam Papon</b>, Ju Hyoung Mun, Shahin Roozkhosh, Denis Hoornaert, Ahmed Sanaullah, Ulrich Drepper, Renato Mancuso, Manos Athanassoulis. “Relational Fabric: Transparent Data Transformation [Vision]”, Proceedings of the IEEE International Conference on Data Engineering (ICDE), 2023. [<a href='pdfs/icde23-vision.pdf'>Download</a>]
+            </p>
+            </li>
+
+            <li class="pub-item"> 
+              <p class="mt-3" align="justify">
+              Renato Mancuso, Shahin Roozkhosh, Denis Hoornaert, Ju Hyoung Mun, <b>Tarikul Islam Papon</b>, Manos Athanassoulis. “Software-Shaped Platforms”, Proceedings of the Cyber-Physical Systems and Internet of Things Week (CPS-IoT Week Workshops), 2023. [<a href='https://dl.acm.org/doi/pdf/10.1145/3576914.3587546'>Download</a>]
+            </p>
+            </li>
+
+
+            <li class="pub-item"> 
+              <p class="mt-3" align="justify">
+              Shahin Roozkhosh, Denis Hoornaert, Ju Hyoung Mun, <b>Tarikul Islam Papon</b>, Ahmed Sanaullah, Ulrich Drepper, Renato Mancuso, Manos Athanassoulis. “Relational Memory: Native In-Memory Accesses on Rows and Columns”, Proceedings of the International Conference on Extending Database Technology (EDBT), 2023. [<a href='https://openproceedings.org/2023/conf/edbt/paper-177.pdf' target="_blank">Download</a>]
+            </p>
+            </li>
+
+            <li class="pub-item"> 
+              <p class="mt-3" align="justify">
+              Manos Athanassoulis, Subhadeep Sarkar, <b>Tarikul Islam Papon</b>, Zichen Zhu, Dimitris Staratzis. “Building Deletion-Compliant Data Systems”, IEEE Data Engineering Bulletin (IEEE DEBull), 2022. [<a href='http://sites.computer.org/debull/A22mar/p21.pdf' target="_blank">Download</a>]
+            </p>
+            </li>
+
+            <li class="pub-item"> 
+              <p class="mt-3" align="justify">
+              T. M. Tariq Adnan, Md. Saiful Islam, <b>Tarikul Islam Papon</b>, Shourav Nath, Muhammad Abdullah Adnan. “UACD: A Local Approach for Identifying the Most Influential Spreaders in Twitter in a Distributed Environment”, Social Network Analysis and Mining (SNAM), Springer, 2022. [<a href='https://link.springer.com/article/10.1007/s13278-022-00862-3' target="_blank">Download</a>]
+            </p>
+            </li>
+
+            <li class="pub-item"> 
+              <p class="mt-3" align="justify">
+              <b>Tarikul Islam Papon</b>, Manos Athanassoulis. “A Parametric I/O Model for Modern Storage Devices”, Proceedings of the International Workshop on Data Management on New Hardware (DaMoN), 2021. [<a href='pdfs/2021_TIP_MA_Damon.pdf'>Download</a>]
+              </p>
+            </li>
+
+            <li class="pub-item"> 
+              <p class="mt-3" align="justify">
+              <b>Tarikul Islam Papon</b>, Manos Athanassoulis. “The Need for a New I/O Model”, Conference on Innovative Data Systems Research (CIDR), 2021. (Abstract). [<a href='pdfs/2021_MTIP_MA_CIDR.pdf'>Download</a>]
+              </p>
+            </li>
+
+            <li class="pub-item"> 
+              <p class="mt-3" align="justify">
+              Subhadeep Sarkar, <b>Tarikul Islam Papon</b>, Dimitris Staratzis, Manos Athanassoulis. “Lethe: A Tunable Delete-Aware LSM Engine”, Proceedings of the 2020 ACM SIGMOD International Conference on Management of Data, 2020. [<a href='pdfs/2020_SS_MTIP_DS_MA.pdf'>Download</a>]
+              </p>
+            </li>
+
+            <li class="pub-item"> 
+              <p class="mt-3" align="justify">
+                <b>Tarikul Islam Papon</b>. “Design And Development Of A Deep Learning Based Application For Detecting Diabetic Retinopathy”, M.Sc. Engineering Thesis, 2019, Department of CSE, BUET, Bangladesh. [<a href='pdfs/Pg_Thesis.pdf'>Download</a>]
+              </p>
+            </li>
+
+            <li class="pub-item"> 
+              <p class="mt-3" align="justify">
+              Sadia Tamanna Khan, Ashef Ainan Baksh, <b>Tarikul Islam Papon</b>, Muhammad Ashraf Ali. “Rainwater Harvesting System: An Approach for Optimum Tank Size Design and Assessment of Efficiency”, International Journal Of Environmental Science and Development, 8(1), 37-43, 2017. [<a href='pdfs/2017_STK_MTIP.pdf'>Download</a>]
+              </p>
+            </li>
+
+            <li class="pub-item">
+              <p class="mt-3" align="justify">
+              <b>Tarikul Islam Papon</b>, Ishtiyaque Ahmad, Nazmus Saquib and Ashikur Rahman. “Non-invasive Heart Rate Measuring Smartphone Applications using On-board Cameras: A Short Survey”. The 1st International Conference on Networking Systems and Security 2015 (NSysS), January 5-7, 2015, Dhaka, Bangladesh. [<a href='pdfs/2015b_MTIP_NS_IA.pdf'>Download</a>]
+              </p>
+            </li>
+            
+            <li class="pub-item">
+              <p class="mt-3" align="justify">  
+              Nazmus Saquib, <b>Tarikul Islam Papon</b>, Ishtiyaque Ahmad and Ashikur Rahman. “Measurement of Heart Rate Using Photoplethysmography”. The 1st International Conference on Networking Systems and Security (NSysS), January 5-7, 2015, Dhaka, Bangladesh. [<a href='pdfs/2015a_NS_MTIP_IA.pdf'>Download</a>]
+              </p>
+            </li>
+
+            <li class="pub-item">
+              <p class="mt-3" align="justify">  
+              <b>Tarikul Islam Papon</b>, Nazmus Saquib, Ishtiyaque Ahmad. “Photoplethysmographic Analysis of Optical Signals : A Single Device to Measure All the Vital Signs”, B.Sc. Engineering Thesis, 2015, Department of CSE, BUET, Bangladesh. [<a href='pdfs/Ug_Thesis.pdf'>Download</a>]
+              </p>
+            </li>
+          </ul>
+
+          <!-- <h4 class="mt-3"><a href="https://scholar.google.com/citations?user=dwKLrWIAAAAJ&hl=en">Google Scholar</a></h4> -->
+		      
+
+		    </div>
+		    
+		  </div>
+		</div>
+  </div>
+</section>
+
+<!-- ─── Footer ─────────────────────────────────────────────────── -->
+<footer class="footer">
+  <p>© 2026 CHiLL · <a href="https://www.cs.umb.edu/">Department of Computer Science, UMass Boston</a></p>
+  <p style="margin-top:6px;">Led by <a href="https://www.cs.umb.edu/~tpapon/">Tarikul Islam Papon</a></p>
+</footer>
+
+<script>
+  // Mobile nav toggle
+  document.getElementById('hamburger').addEventListener('click', () => {
+    document.getElementById('navLinks').classList.toggle('open');
+  });
+
+  // News expand/collapse
+  function toggleNews() {
+    const extra = document.getElementById('oldNews');
+    const btn = document.getElementById('newsToggle');
+    if (extra.classList.contains('visible')) {
+      extra.classList.remove('visible');
+      btn.textContent = 'Show all news';
+    } else {
+      extra.classList.add('visible');
+      btn.textContent = 'Show fewer';
+    }
+  }
+
+  // Active nav on scroll
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+  window.addEventListener('scroll', () => {
+    let curr = '';
+    sections.forEach(s => { if (window.scrollY >= s.offsetTop - 80) curr = s.id; });
+    navLinks.forEach(a => {
+      a.classList.toggle('active', a.getAttribute('href') === '#' + curr);
+    });
+  });
+</script>
+</body>
+</html>

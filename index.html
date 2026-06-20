@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CHiLL — Computing Hardware & Large Data Lab @ UMass Boston</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ─── Navigation ────────────────────────────────────────────── -->
+<nav class="nav">
+  <div class="nav-inner">
+    <!-- <a class="nav-brand" href="index.html">
+      <div class="nav-brand-logo">CHiLL</div>
+      <span>CHiLL Lab</span>
+    </a> -->
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html#home" class="active">Home</a>
+      <a href="index.html#news">News</a>
+      <a href="index.html#research">Research</a>
+      <a href="index.html#team">Team</a>
+      <a href="index.html#classes">Classes</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="publications.html" class="nav-cv">Publications</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ─── Hero Banner ───────────────────────────────────────────── -->
+<section class="hero" id="home">
+  <!-- Inline SVG background pattern: circuit / data grid -->
+  <svg class="hero-bg-svg" viewBox="0 0 1200 400" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+        <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(0,153,204,0.5)" stroke-width="0.5"/>
+      </pattern>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#grid)"/>
+    <!-- Circuit-like decorative paths -->
+    <g stroke="rgba(0,153,204,0.7)" stroke-width="1.5" fill="none">
+      <path d="M100,80 H200 V160 H360"/>
+      <circle cx="200" cy="80" r="4" fill="rgba(0,153,204,0.7)"/>
+      <circle cx="360" cy="160" r="4" fill="rgba(0,153,204,0.7)"/>
+      <path d="M500,40 V120 H700 V200"/>
+      <circle cx="500" cy="40" r="4" fill="rgba(0,153,204,0.7)"/>
+      <circle cx="700" cy="200" r="4" fill="rgba(0,153,204,0.7)"/>
+      <path d="M900,100 H1050 V60 H1150"/>
+      <circle cx="900" cy="100" r="4" fill="rgba(0,153,204,0.7)"/>
+      <circle cx="1150" cy="60" r="4" fill="rgba(0,153,204,0.7)"/>
+      <path d="M50,280 H180 V320 H340 V260"/>
+      <circle cx="180" cy="280" r="4" fill="rgba(0,153,204,0.7)"/>
+      <circle cx="340" cy="260" r="4" fill="rgba(0,153,204,0.7)"/>
+      <path d="M600,300 H800 V350"/>
+      <circle cx="600" cy="300" r="4" fill="rgba(0,153,204,0.7)"/>
+      <circle cx="800" cy="350" r="4" fill="rgba(0,153,204,0.7)"/>
+    </g>
+    <!-- Icons: tree, database, SSD, FPGA, brain — styled minimal SVG -->
+    <!-- Tree node -->
+    <g transform="translate(80,180)" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" fill="none">
+      <circle cx="40" cy="15" r="6" fill="rgba(255,255,255,0.3)"/>
+      <circle cx="20" cy="45" r="6" fill="rgba(255,255,255,0.3)"/>
+      <circle cx="60" cy="45" r="6" fill="rgba(255,255,255,0.3)"/>
+      <circle cx="10" cy="72" r="5" fill="rgba(255,255,255,0.3)"/>
+      <circle cx="30" cy="72" r="5" fill="rgba(255,255,255,0.3)"/>
+      <line x1="40" y1="21" x2="20" y2="39"/><line x1="40" y1="21" x2="60" y2="39"/>
+      <line x1="20" y1="51" x2="10" y2="67"/><line x1="20" y1="51" x2="30" y2="67"/>
+    </g>
+    <!-- Database cylinders -->
+    <g transform="translate(290,170)" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" fill="rgba(255,255,255,0.08)">
+      <ellipse cx="35" cy="12" rx="35" ry="9"/>
+      <rect x="0" y="12" width="70" height="28"/>
+      <ellipse cx="35" cy="40" rx="35" ry="9"/>
+      <rect x="0" y="40" width="70" height="20"/>
+      <ellipse cx="35" cy="60" rx="35" ry="9"/>
+    </g>
+    <!-- SSD chip -->
+    <g transform="translate(520,175)" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" fill="rgba(255,255,255,0.06)">
+      <rect x="5" y="5" width="70" height="55" rx="4"/>
+      <rect x="18" y="18" width="44" height="28" rx="2"/>
+      <text x="40" y="37" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.4)" font-family="JetBrains Mono,monospace">SSD</text>
+      <line x1="5" y1="18" x2="0" y2="18"/><line x1="5" y1="28" x2="0" y2="28"/>
+      <line x1="5" y1="38" x2="0" y2="38"/><line x1="5" y1="48" x2="0" y2="48"/>
+      <line x1="75" y1="18" x2="80" y2="18"/><line x1="75" y1="28" x2="80" y2="28"/>
+      <line x1="75" y1="38" x2="80" y2="38"/><line x1="75" y1="48" x2="80" y2="48"/>
+    </g>
+    <!-- FPGA -->
+    <g transform="translate(760,170)" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" fill="rgba(255,255,255,0.06)">
+      <rect x="10" y="10" width="70" height="60" rx="4"/>
+      <rect x="22" y="22" width="46" height="36" rx="2"/>
+      <text x="45" y="44" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.4)" font-family="JetBrains Mono,monospace">FPGA</text>
+      <line x1="20" y1="10" x2="20" y2="4"/><line x1="35" y1="10" x2="35" y2="4"/>
+      <line x1="50" y1="10" x2="50" y2="4"/><line x1="65" y1="10" x2="65" y2="4"/>
+      <line x1="20" y1="70" x2="20" y2="76"/><line x1="35" y1="70" x2="35" y2="76"/>
+      <line x1="50" y1="70" x2="50" y2="76"/><line x1="65" y1="70" x2="65" y2="76"/>
+    </g>
+    <!-- Neural/brain icon -->
+    <g transform="translate(1000,175)" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" fill="none">
+      <circle cx="40" cy="35" r="30" fill="rgba(255,255,255,0.05)"/>
+      <path d="M20,35 Q22,20 35,18 Q48,16 52,28 Q60,25 62,38 Q64,50 54,55 Q50,62 40,60 Q30,62 26,55 Q16,50 20,35Z"/>
+      <line x1="40" y1="18" x2="40" y2="52"/>
+      <line x1="20" y1="36" x2="60" y2="36"/>
+      <circle cx="40" cy="30" r="3" fill="rgba(0,153,204,0.6)"/>
+      <circle cx="30" cy="44" r="3" fill="rgba(0,153,204,0.6)"/>
+      <circle cx="50" cy="44" r="3" fill="rgba(0,153,204,0.6)"/>
+    </g>
+  </svg>
+
+  <div class="hero-inner">
+    <div class="hero-text">
+      <div class="hero-sub">Department of Computer Science · UMass Boston</div>
+      <h1><em>C</em>omputing <em>H</em>ardware &amp;&nbsp;<em>L</em>arge Data <em>L</em>ab</h1>
+      <p class="hero-desc">
+        We design hardware-aware data management systems for modern storage devices — building smarter, faster, and more autonomous data systems for the next generation of computing.
+      </p>
+      <div class="hero-chips">
+        <span class="chip">LSM-Trees</span>
+        <span class="chip">ZNS SSDs</span>
+        <span class="chip">CXL Memory</span>
+        <span class="chip">RL for Data Systems</span>
+        <span class="chip">FPGA Co-Design</span>
+        <span class="chip">Bufferpool Management</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── News ───────────────────────────────────────────────────── -->
+<section class="section" id="news">
+  <div class="container">
+    <h2 class="section-title">Recent News</h2>
+    <div class="divider"></div>
+    <div class="news-list">
+
+      <div class="news-item">
+        <div class="news-date">May 2026</div>
+        <div class="news-text"><span class="badge badge-pub">Publication</span>Our demonstration paper on ReStore accepted at <strong>VLDB 2026</strong>!</div>
+      </div>
+      <div class="news-item">
+        <div class="news-date">May 2026</div>
+        <div class="news-text"><span class="badge badge-high">Service</span>Serving on the program committee of <a href="https://icde2027.github.io/" target="_blank">IEEE ICDE 2027</a>.</div>
+      </div>
+      <div class="news-item">
+        <div class="news-date">Apr 2026</div>
+        <div class="news-text"><span class="badge badge-pub">Publication</span><strong>"ZARC: Re-inventing Zone Allocation for LSMs on ZNS SSD"</strong> accepted at <strong>DaMoN 2026</strong>. <a href="pdfs/zarc_damon_cr.pdf" target="_blank">[PDF]</a></div>
+      </div>
+      <div class="news-item">
+        <div class="news-date">Mar 2026</div>
+        <div class="news-text"><span class="badge badge-pub">Publication</span><strong>"ReStore: A Reinforcement Learning Approach for Data Migration in Multi-Tiered Storage"</strong> accepted at <strong>SIGMOD 2026</strong>! <a href="https://dl.acm.org/doi/epdf/10.1145/3802104" target="_blank">[Paper]</a></div>
+      </div>
+      <div class="news-item">
+        <div class="news-date">Feb 2026</div>
+        <div class="news-text"><span class="badge badge-high">Service</span>Serving as Local Arrangements Chair at <a href="https://vldb.org/2026/officers.html" target="_blank">VLDB 2026</a>.</div>
+      </div>
+      <div class="news-item">
+        <div class="news-date">Jan 2026</div>
+        <div class="news-text"><span class="badge badge-high">Event</span>Organized and chaired <a href="https://nedbday.github.io/2026" target="_blank">NEDB Day 2026</a> at UMass Boston. Lab presented 3 posters. <a href="https://nedbday.github.io/2026/download/posters/poster_47.pdf" target="_blank">[P1]</a> <a href="https://nedbday.github.io/2026/download/posters/poster_48.pdf" target="_blank">[P2]</a> <a href="https://nedbday.github.io/2026/download/posters/poster_22.pdf" target="_blank">[P3]</a></div>
+      </div>
+      <div class="news-item">
+        <div class="news-date">Sept 2025</div>
+        <div class="news-text"><span class="badge badge-high">Highlight</span>Joined UMass Boston CS Department as an <strong>Assistant Professor</strong>!</div>
+      </div>
+      <div class="news-item">
+        <div class="news-date">May 2025</div>
+        <div class="news-text"><span class="badge badge-high">Award</span>Awarded BU <strong>Computer Science Teaching Excellence Award</strong>! <a href="pdfs/award_cs_teaching_excellence.pdf" target="_blank">[Certificate]</a></div>
+      </div>
+      <div class="news-item">
+        <div class="news-date">Apr 2025</div>
+        <div class="news-text"><span class="badge badge-high">Milestone</span>Successfully defended doctoral thesis! <a href="pdfs/papon_phd_thesis.pdf" target="_blank">[Dissertation]</a></div>
+      </div>
+      <div class="news-item">
+        <div class="news-date">Mar 2025</div>
+        <div class="news-text"><span class="badge badge-pub">Publication</span>ACE demonstration paper accepted at <strong>SIGMOD 2025</strong>. <a href="https://dl.acm.org/doi/pdf/10.1145/3722212.3725077" target="_blank">[Paper]</a></div>
+      </div>
+
+      <!-- Older news (hidden by default) -->
+      <div class="news-extra" id="oldNews">
+        <div class="news-item">
+          <div class="news-date">Dec 2024</div>
+          <div class="news-text"><span class="badge badge-high">Event</span>Presented poster on RL-based data migration at <strong>NEDB Day 2025</strong>. <a href="pdfs/nedb_25_abstract.pdf" target="_blank">[Abstract]</a></div>
+        </div>
+        <div class="news-item">
+          <div class="news-date">Mar 2024</div>
+          <div class="news-text"><span class="badge badge-pub">Publication</span><strong>"Effortless Locality on Data Systems using Relational Fabric"</strong> accepted at <strong>IEEE TKDE</strong>. <a href="https://ieeexplore.ieee.org/document/10495146" target="_blank">[Paper]</a></div>
+        </div>
+        <div class="news-item">
+          <div class="news-date">Feb 2024</div>
+          <div class="news-text"><span class="badge badge-pub">Publication</span><strong>"CAVE: Concurrency-Aware Graph Processing on SSDs"</strong> accepted at <strong>SIGMOD 2024</strong>! <a href="pdfs/paper-sigmod24-cave.pdf" target="_blank">[PDF]</a></div>
+        </div>
+        <div class="news-item">
+          <div class="news-date">Nov 2023</div>
+          <div class="news-text"><span class="badge badge-pub">Publication</span><strong>"Silhouette: Toward Performance-Conscious and Transferable CPU Embeddings"</strong> accepted at <strong>ML for Systems @ NeurIPS 2023</strong>.</div>
+        </div>
+        <div class="news-item">
+          <div class="news-date">Sept 2023</div>
+          <div class="news-text"><span class="badge badge-high">Award</span><strong>"On-the-fly Data Transformation in Action"</strong> wins <strong>Best Demo Award</strong> at <strong>VLDB 2023</strong>!</div>
+        </div>
+        <div class="news-item">
+          <div class="news-date">Nov 2022</div>
+          <div class="news-text"><span class="badge badge-pub">Publication</span><strong>"ACEing the Bufferpool Management Paradigm"</strong> accepted at <strong>IEEE ICDE 2023</strong>.</div>
+        </div>
+        <div class="news-item">
+          <div class="news-date">May 2022</div>
+          <div class="news-text"><span class="badge badge-high">Award</span>Awarded BU <strong>Computer Science Research Excellence Award</strong>! <a href="pdfs/award_cs_research_excellence.pdf" target="_blank">[Certificate]</a></div>
+        </div>
+        <div class="news-item">
+          <div class="news-date">Jan 2021</div>
+          <div class="news-text"><span class="badge badge-high">Award</span><strong>"The Need for a New I/O Model"</strong> wins <strong>Honorable Mention for Best Gong Show Talk</strong> at <strong>CIDR 2021</strong>!</div>
+        </div>
+        <div class="news-item">
+          <div class="news-date">Mar 2020</div>
+          <div class="news-text"><span class="badge badge-pub">Publication</span><strong>"Lethe: A Tunable Delete-Aware LSM Engine"</strong> accepted at <strong>SIGMOD 2020</strong>!</div>
+        </div>
+      </div>
+
+    </div>
+    <button class="show-more-btn" id="newsToggle" onclick="toggleNews()">Show all news</button>
+  </div>
+</section>
+
+<!-- ─── Research ───────────────────────────────────────────────── -->
+<section class="section" id="research">
+  <div class="container">
+    <h2 class="section-title">Research Overview</h2>
+    <div class="divider"></div>
+    <p class="research-intro">
+      Welcome to CHiLL@UMB! We develop cutting-edge data management solutions for modern storage and memory devices and next-generation storage engines. Our current research focuses on ML-driven optimization of LSM-tree compactions, efficient operation of ZNS SSDs, and CXL-enabled disaggregated database systems. We explore RL-inspired approaches to classical and emerging data management problems — indexing and query optimization — making data systems more autonomous and performance-stable. We also work on hardware/software co-design using FPGA to support on-the-fly near-data transformation for efficient HTAP workloads. We aim to <strong>leverage storage hardware characteristics for scalable and efficient data management</strong>.
+    </p>
+    <!-- <p style="margin-top:8px;">
+      <a href="pdfs/research_statement.pdf" style="font-weight:600;">→ Research Statement (PDF)</a>
+    </p> -->
+    <span class="section-label">Systems We Build: Current &amp; Past Projects</span>
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <div class="project-card-header"></div>
+        <div class="project-card-body">
+          <div class="project-card-title">RL-Based LSM Compactions</div>
+          <p class="project-card-text">We tune LSM compaction parameters via reinforcement learning based on workload properties, enabling self-adapting storage engines.</p>
+          <span class="project-card-link" style="color:var(--ink-muted); cursor:default;">Coming Soon</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-card-header"></div>
+        <div class="project-card-body">
+          <div class="project-card-title">UniZNS: Optimizing LSM Compactions for ZNS SSDs</div>
+          <img src="images/projects/unizns.png" alt="UniZNS" style="width:100%; border-radius:6px;">
+          <p class="project-card-text">UniZNS integrates any file placement, garbage collection, and zone allocation policies to identify the best combinations across different LSM compaction strategies and workloads.</p>
+          <span class="project-card-link" style="color:var(--ink-muted); cursor:default;">Coming Soon</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-card-header"></div>
+        <div class="project-card-body">
+          <div class="project-card-title">ReStore: RL-Based Page Migration in Tiered Storage</div>
+          <img src="images/projects/restore.png" alt="ReStore" style="width:100%; border-radius:6px;">
+          <p class="project-card-text">A reinforcement learning-based page migration policy for multi-tiered storage that considers both workload and device (SSD) properties simultaneously.</p>
+          <a class="project-card-link" href="https://github.com/BU-DiSC/ReStore" target="_blank">Learn more →</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-card-header"></div>
+        <div class="project-card-body">
+          <div class="project-card-title">CAVE: Concurrency-Aware Graph Manager</div>
+          <img src="images/projects/cave.png" alt="CAVE" style="width:100%; border-radius:6px;">
+          <p class="project-card-text">CAVE exploits full SSD parallelism for graph processing, implementing five popular graph traversal algorithms with hardware-aware concurrency control.</p>
+          <a class="project-card-link" href="https://github.com/BU-DiSC/CAVE" target="_blank">Learn more →</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-card-header"></div>
+        <div class="project-card-body">
+          <div class="project-card-title">ACE: SSD-Aware Bufferpool Manager</div>
+          <img src="images/projects/ace.png" alt="ACE" style="width:100%; border-radius:6px;">
+          <p class="project-card-text">ACE writes multiple dirty pages concurrently to amortize the asymmetric write cost of SSDs, rethinking the bufferpool management paradigm for modern storage.</p>
+          <a class="project-card-link" href="https://disc-projects.bu.edu/ACE" target="_blank">Learn more →</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-card-header"></div>
+        <div class="project-card-body">
+          <div class="project-card-title">Relational Memory</div>
+          <img src="images/projects/relmem.jpg" alt="Relational Memory" style="width:100%; border-radius:6px;">
+          <p class="project-card-text">An FPGA-based near-memory computation system that transforms between row-wise and column-wise data on the fly, reducing cache pollution while ensuring optimal data layout for any query.</p>
+          <a class="project-card-link" href="https://github.com/BU-DiSC/relational-memory/tree/master/vldb2023" target="_blank">Learn more →</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-card-header"></div>
+        <div class="project-card-body">
+          <div class="project-card-title">The Parametric I/O Model</div>
+          <img src="images/projects/param_io.png" alt="Parametric I/O Model" style="width:100%; border-radius:6px;">
+          <p class="project-card-text">A simple yet expressive I/O model that captures asymmetry and concurrency of contemporary storage devices, forming the theoretical foundation for device-aware system design.</p>
+          <a class="project-card-link" href="https://disc-projects.bu.edu/parametric-io-model/" target="_blank">Learn more →</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-card-header"></div>
+        <div class="project-card-body">
+          <div class="project-card-title">Lethe: Tunable Delete-Aware LSM Engine</div>
+          <img src="images/projects/lethe.png" alt="Lethe" style="width:100%; border-radius:6px;">
+          <p class="project-card-text">Lethe provides persistence guarantees for delete operations within bounded time and enables efficient secondary range deletes in LSM-based storage engines.</p>
+          <a class="project-card-link" href="https://disc-projects.bu.edu/lethe/" target="_blank">Learn more →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─── Team ────────────────────────────────────────────────── -->
+<section class="section section-dark" id="team">
+  <div class="container">
+    <h2 class="section-title">Team Members</h2>
+    <div class="divider"></div>
+    <div class="members-grid">
+      <div class="member-card">
+        <div class="member-avatar">
+          <img src="images/people/papon.jpg" alt="P" style="width:100%; height:100%; object-fit:cover; border-radius:50%;">
+        </div>
+        <div class="member-name"><a href="https://www.cs.umb.edu/~tpapon/" target="_blank" style="color:white;">Tarikul Islam Papon</a></div>
+        <div class="member-role">Assistant Professor<br>PI &amp; Lab Director</div>
+      </div>
+      <div class="member-card">
+        <div class="member-avatar">
+          <img src="images/people/sse.jpeg" alt="S" style="width:100%; height:100%; object-fit:cover; border-radius:50%;">
+        </div>
+        <div class="member-name"><a href="https://s-saqib.github.io/" target="_blank" style="color:white;">Shadman Saqib Eusuf</a></div>
+        <div class="member-role">PhD Student</div>
+      </div>
+      <div class="member-card">
+        <div class="member-avatar">F</div>
+        <div class="member-name">Farhan S. Chowdhury</div>
+        <div class="member-role">Graduate Researcher</div>
+      </div>
+      <div class="member-card">
+        <div class="member-avatar">A</div>
+        <div class="member-name">Aroma Hoque</div>
+        <div class="member-role">Graduate Researcher</div>
+      </div>
+      <div class="member-card">
+        <div class="member-avatar">A</div>
+        <div class="member-name">Anindya Hoque</div>
+        <div class="member-role">Graduate Researcher</div>
+      </div>
+      <div class="member-card">
+        <div class="member-avatar">S</div>
+        <div class="member-name">Saffat Zabin</div>
+        <div class="member-role">Graduate Researcher</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Teaching ───────────────────────────────────────────────── -->
+<section class="section section-alt" id="classes">
+  <div class="container">
+    <h2 class="section-title">Classes</h2>
+    <div class="divider"></div>
+
+    <div class="teaching-block">
+      <!-- <h3>UMass Boston · Assistant Professor (Fall 2025 – Present)</h3> -->
+      <div class="course-item">
+        <span class="course-code">CS 436/636</span>
+        <span class="course-name">Database Application Development</span>
+        <span class="course-link"><a href="https://www.cs.umb.edu/~tpapon/cs436-636/" target="_blank">Spring 2026 →</a></span>
+      </div>
+      <div class="course-item">
+        <span class="course-code">CS 187</span>
+        <span class="course-name">Computer Science Gateway Seminar I</span>
+        <span class="course-link">Fall 2025</span>
+      </div>
+    </div>
+
+    <!-- <div class="teaching-block">
+      <h3>Boston University · Course Instructor (Spring 2024)</h3>
+      <div class="course-item">
+        <span class="course-code">CS 561</span>
+        <span class="course-name">Data Systems Architectures</span>
+        <span class="course-link"><a href="https://bu-disc.github.io/CS561-Spring2024/" target="_blank">Spring 2024 →</a></span>
+      </div>
+    </div>
+
+    <div class="teaching-block">
+      <h3>Boston University · Teaching Assistant (Fall 2020 – Fall 2023)</h3>
+      <div class="course-item">
+        <span class="course-code">CS 210</span>
+        <span class="course-name">Computer Systems</span>
+        <span class="course-link">Fall 2023</span>
+      </div>
+      <div class="course-item">
+        <span class="course-code">CS 561</span>
+        <span class="course-name">Data Systems Architectures</span>
+        <span class="course-link">Spring 2023, 2021</span>
+      </div>
+      <div class="course-item">
+        <span class="course-code">CS 460</span>
+        <span class="course-name">Introduction to Database Systems</span>
+        <span class="course-link">Fall 2021, 2020</span>
+      </div>
+    </div>
+
+    <div class="teaching-block">
+      <h3>BUET, Bangladesh · Lecturer (Oct 2015 – Aug 2019)</h3>
+      <div class="course-item">
+        <span class="course-code">CSE 453</span>
+        <span class="course-name">High Performance Database Systems</span>
+      </div>
+      <div class="course-item">
+        <span class="course-code">CSE 433</span>
+        <span class="course-name">Digital Image Processing</span>
+      </div>
+      <div class="course-item">
+        <span class="course-code">CSE 307</span>
+        <span class="course-name">Software Engineering &amp; Information System Design</span>
+      </div>
+      <div class="course-item">
+        <span class="course-code">+ 10 more</span>
+        <span class="course-name">Labs and courses in Networking, AI, Algorithms, Assembly, OOP, and more</span>
+      </div>
+    </div> -->
+  </div>
+</section>
+
+<!-- ─── Contact ────────────────────────────────────────────────── -->
+<section class="section" id="contact">
+  <div class="container">
+    <h2 class="section-title">Contact</h2>
+    <div class="divider"></div>
+    <div class="contact-grid">
+      <div class="contact-item">
+        <div class="contact-icon">✉</div>
+        <div>
+          <div class="contact-label">Email</div>
+          <div class="contact-value"><a href="mailto:t.papon@umb.edu">t.papon@umb.edu</a></div>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">📍</div>
+        <div>
+          <div class="contact-label">Office</div>
+          <div class="contact-value">McCormack Hall, M-3-201-28<br/>Department of Computer Science<br/>UMass Boston, 100 Morrissey Blvd<br/>Boston, MA 02125</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Footer ─────────────────────────────────────────────────── -->
+<footer class="footer">
+  <p>© 2026 CHiLL · <a href="https://www.cs.umb.edu/">Department of Computer Science, UMass Boston</a></p>
+  <p style="margin-top:6px;">Led by <a href="https://www.cs.umb.edu/~tpapon/">Tarikul Islam Papon</a></p>
+</footer>
+
+<script>
+  // Mobile nav toggle
+  document.getElementById('hamburger').addEventListener('click', () => {
+    document.getElementById('navLinks').classList.toggle('open');
+  });
+
+  // News expand/collapse
+  function toggleNews() {
+    const extra = document.getElementById('oldNews');
+    const btn = document.getElementById('newsToggle');
+    if (extra.classList.contains('visible')) {
+      extra.classList.remove('visible');
+      btn.textContent = 'Show all news';
+    } else {
+      extra.classList.add('visible');
+      btn.textContent = 'Show fewer';
+    }
+  }
+
+  // Active nav on scroll
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+  window.addEventListener('scroll', () => {
+    let curr = '';
+    sections.forEach(s => { if (window.scrollY >= s.offsetTop - 80) curr = s.id; });
+    navLinks.forEach(a => {
+      a.classList.toggle('active', a.getAttribute('href') === '#' + curr);
+    });
+  });
+</script>
+</body>
+</html>
