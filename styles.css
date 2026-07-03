@@ -91,39 +91,35 @@
 
     /* ── Hero / Banner ─────────────────────────────────────────── */
     .hero {
-      background: var(--ink);
-      position: relative; overflow: hidden;
-      min-height: 400px;
-      display: flex; align-items: center;
+      background: rgb(89, 89, 89);  /* fallback for browsers that don't support gradients */
+      overflow: hidden;
+      text-align: center;
     }
-    .hero-bg-svg {
-      position: absolute; inset: 0; width: 100%; height: 100%;
-      opacity: 0.55;
+    .hero-bg {
+      padding: 10px;
+      width: 100%;
     }
+
+    .hero-bg img {
+      max-width: 1000px;
+    }
+
     .hero-inner {
-      position: relative; z-index: 1;
-      max-width: 1160px; margin: 0 auto; padding: 60px 28px;
-      display: grid; grid-template-columns: 1fr auto;
-      gap: 40px; align-items: center;
+      padding: 20px;
+      gap: 40px;
+      text-align: center;
     }
-    .hero-text h1 {
-      font-family: 'DM Serif Display', Georgia, serif;
-      font-size: clamp(2rem, 4vw, 3.2rem);
-      color: white; line-height: 1.2;
-      margin-bottom: 12px;
-    }
-    .hero-text h1 em { color: var(--accent2); font-style: italic; }
-    .hero-sub {
-      font-size: 14.5px; color: rgba(255,255,255,0.6);
-      letter-spacing: 0.04em; text-transform: uppercase;
-      font-weight: 500; margin-bottom: 16px;
-    }
+    
     .hero-desc {
-      font-size: 15.5px; color: rgba(255,255,255,0.8);
-      max-width: 900px; line-height: 1.75;
+      font-size: 17px;
+      color: rgba(255,255,255,0.8);
+      line-height: 1.5;
+      max-width: 900px; margin: 0 auto;
     }
+
     .hero-chips {
       display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px;
+      justify-content: center; align-items: center;
     }
     .chip {
       font-family: 'JetBrains Mono', monospace;
@@ -218,7 +214,7 @@
 
     /* ── Research ──────────────────────────────────────────────── */
     .research-intro {
-      max-width: 1080px; color: var(--ink-soft);
+      max-width: 1160px; color: var(--ink-soft);
       line-height: 1.8; margin-bottom: 32px;
       text-align: justify;
     }
@@ -261,7 +257,7 @@
     /* ── Project Cards ─────────────────────────────────────────── */
     .projects-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
       gap: 22px;
     }
     .project-card {
@@ -297,7 +293,7 @@
 
     /* ── Members ───────────────────────────────────────────────── */
     .team-category {
-      color: rgba(255,255,255,0.7);
+      color: rgba(55,55,55,0.7);
       text-transform: uppercase;
       letter-spacing: 0.15em;
       font-size: 13px;
@@ -316,14 +312,13 @@
     .members-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 28px;
+      gap: 20px;
     }
 
     .member-card {
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.08);
+      border: 1px solid var(--accent);
       border-radius: 24px;
-      padding: 36px 28px;
+      width: 157px !important;
       text-align: center;
       backdrop-filter: blur(20px);
       transition:
@@ -341,14 +336,14 @@
     }
 
     .faculty-card {
-      width: 340px;
+      width: 202px !important;
     }
 
     .member-avatar {
-      width: 100px;
-      height: 100px;
-      margin: 0 auto 22px;
-      border-radius: 50%;
+      width: 155px;
+      height: 155px;
+      margin: 0 auto 10px;
+      border-radius: 22px 22px 0% 0%;
       overflow: hidden;
       background: linear-gradient(
           135deg,
@@ -360,8 +355,14 @@
       justify-content: center;
       font-size: 2.8rem;
       font-weight: 700;
-      color: white;
       font-family: 'DM Serif Display', serif;
+      color: var(--surface);
+    }
+
+    .faculty-avatar {
+      width: 200px !important;
+      height: 200px !important;
+      border-radius: 22px 22px 0% 0% !important;
     }
 
     .member-avatar img {
@@ -373,13 +374,12 @@
     .member-name {
       font-size: 14px;
       font-weight: 500;
-      margin-bottom: 8px;
-      color: white;
+      /* color: var(--ink); */
     }
 
     .member-name a {
       text-decoration: none;
-      color: white;
+      /* color: var(--ink); */
     }
 
     .member-name a:hover {
@@ -387,41 +387,15 @@
     }
 
     .member-role {
-      color: rgba(255,255,255,0.65);
       font-size: 0.85rem;
-    }
-
-    .member-title {
-      margin-top: 10px;
-      display: inline-block;
-      padding: 6px 14px;
-      border-radius: 999px;
-      background: rgba(0,153,204,0.12);
-      color: var(--accent2);
-      font-size: 0.82rem;
-      font-weight: 600;
+      margin-bottom: 6px;
     }
 
     /* ── Teaching ──────────────────────────────────────────────── */
-    .teaching-block { margin-bottom: 32px; }
-    .teaching-block h3 {
-      font-size: 15px; font-weight: 600; color: var(--ink);
-      padding-bottom: 8px; border-bottom: 2px solid var(--accent2);
-      margin-bottom: 14px;
-    }
-    .course-item {
-      display: flex; align-items: baseline; gap: 10px;
-      padding: 8px 0; border-bottom: 1px solid var(--border);
-      font-size: 13.5px;
-    }
-    .course-code {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 12px; color: var(--accent);
-      font-weight: 500; flex-shrink: 0;
-    }
-    .course-name { color: var(--ink-soft); }
-    .course-link {
-      margin-left: auto; font-size: 12px; flex-shrink: 0;
+    .classes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 22px;
     }
 
     /* ── Contact ───────────────────────────────────────────────── */
