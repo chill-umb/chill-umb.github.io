@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -38,13 +39,10 @@
 <!-- ─── Hero Banner ───────────────────────────────────────────── -->
 <section class="hero" id="home">
   <div class="hero-bg">
-    <img src="images/topcover.png" alt="CHiLL Lab" class="hero-bg" />
+    <img src="images/topcover.png" alt="CHiLL Lab" class="hero-bg" style="padding: 0px"/>
   </div>
 
   <div class="hero-inner">
-    <div class="hero-desc">
-      We design hardware-aware data management systems for modern storage devices — building smarter, faster, and more autonomous data systems for the next generation of computing.
-    </div>
     <div class="hero-chips">
       <span class="chip">LSM-Trees</span>
       <span class="chip">ZNS SSDs</span>
@@ -55,6 +53,10 @@
     </div>
   </div>
 </section>
+
+<div class="hero-desc">
+  We design hardware-aware data management systems for modern storage devices — building smarter, faster, and more autonomous data systems for the next generation of computing.
+</div>
 
 <!-- ─── Publications ───────────────────────────────────────────────────── -->
 <section class="section" id="publications">
@@ -70,15 +72,50 @@
             <li class="pub-item">
               <div class="badge badge-pub">SIGMOD</div>
               <div class="mt-5 pub-title" align="justify">
-                <a href="https://dl.acm.org/doi/epdf/10.1145/3802104" target="_blank">
-                  ReStore: A Reinforcement Learning Approach for Data Migration in Multi-Tiered Storage
-                </a>
+                ReStore: A Reinforcement Learning Approach for Data Migration in Multi-Tiered Storage
               </div>
               <div class="mt-5 pub-authors" align="justify">
                 Tianru Zhang, <b>Tarikul Islam Papon</b>, Teona Bagashbili, Salman Toor, Manos Athanassoulis
               </div>
               <div class="mt-5 pub-venue" align="justify">
                 Proceedings of the ACM SIGMOD International Conference on Management of Data, 2026
+              </div>
+              <div class="pub-links">
+                <a href="https://dl.acm.org/doi/epdf/10.1145/3802104"
+                  target="_blank"
+                  title="Paper">
+                  <i class="fas fa-file-pdf pub-icon"></i>
+                </a>
+
+                <!-- <a href="VIDEO"
+                  target="_blank"
+                  title="Presentation Video">
+                  <i class="fab fa-youtube"></i>
+                </a>
+
+                <a href="SLIDES"
+                  target="_blank"
+                  title="Slides">
+                  <i class="fas fa-file-powerpoint"></i>
+                </a>
+
+                <a href="POSTER"
+                  target="_blank"
+                  title="Poster">
+                  <i class="fas fa-image"></i>
+                </a>
+
+                <a href="WEBSITE"
+                  target="_blank"
+                  title="Project Website">
+                  <i class="fas fa-globe"></i>
+                </a>
+
+                <a href="GITHUB"
+                  target="_blank"
+                  title="Source Code">
+                  <i class="fab fa-github"></i>
+                </a> -->
               </div>
             </li>
 
@@ -93,20 +130,92 @@
               <div class="mt-5 pub-venue" align="justify">
                 Proceedings of the VLDB Endowment, 2026
               </div>
+              <!-- <div class="pub-links">
+                <a href="#"
+                  target="_blank"
+                  title="Paper">
+                  <i class="fas fa-file-pdf pub-icon"></i>
+                </a>
+
+                <a href="VIDEO"
+                  target="_blank"
+                  title="Presentation Video">
+                  <i class="fab fa-youtube"></i>
+                </a>
+
+                <a href="SLIDES"
+                  target="_blank"
+                  title="Slides">
+                  <i class="fas fa-file-powerpoint"></i>
+                </a>
+
+                <a href="POSTER"
+                  target="_blank"
+                  title="Poster">
+                  <i class="fas fa-image"></i>
+                </a>
+
+                <a href="WEBSITE"
+                  target="_blank"
+                  title="Project Website">
+                  <i class="fas fa-globe"></i>
+                </a>
+
+                <a href="GITHUB"
+                  target="_blank"
+                  title="Source Code">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div> -->
             </li>
 
             <li class="pub-item">
               <div class="badge badge-pub">DaMoN</div>
               <div class="mt-5 pub-title" align="justify">
-                <a href="https://www.cs.umb.edu/~tpapon/pdfs/zarc_damon_cr.pdf" target="_blank">
-                  ZARC: Re-inventing Zone Allocation for LSMs on ZNS SSD
-                </a>
+                ZARC: Re-inventing Zone Allocation for LSMs on ZNS SSD
               </div>
               <div class="mt-5 pub-authors" align="justify">
                 Farhan S. Chowdhury, Shadman Saqib Eusuf, Subhadeep Sarkar, <b>Tarikul Islam Papon</b>
               </div>
               <div class="mt-5 pub-venue" align="justify">
                 Proceedings of the International Workshop on Data Management on New Hardware (DaMoN), 2026
+              </div>
+              <div class="pub-links">
+                <a href="https://www.cs.umb.edu/~tpapon/pdfs/zarc_damon_cr.pdf"
+                  target="_blank"
+                  title="Paper">
+                  <i class="fas fa-file-pdf pub-icon"></i>
+                </a>
+
+                <!-- <a href="VIDEO"
+                  target="_blank"
+                  title="Presentation Video">
+                  <i class="fab fa-youtube"></i>
+                </a>
+
+                <a href="SLIDES"
+                  target="_blank"
+                  title="Slides">
+                  <i class="fas fa-file-powerpoint"></i>
+                </a>
+
+                <a href="POSTER"
+                  target="_blank"
+                  title="Poster">
+                  <i class="fas fa-image"></i>
+                </a>
+
+                <a href="WEBSITE"
+                  target="_blank"
+                  title="Project Website">
+                  <i class="fas fa-globe"></i>
+                </a>
+
+                <a href="GITHUB"
+                  target="_blank"
+                  title="Source Code">
+                  <i class="fab fa-github"></i>
+                </a> -->
               </div>
             </li>
 
@@ -115,15 +224,51 @@
             <li class="pub-item">
               <div class="badge badge-pub">SIGMOD</div>
               <div class="mt-5 pub-title" align="justify">
-                <a href="https://dl.acm.org/doi/pdf/10.1145/3722212.3725077" target="_blank">
-                  ACE-in-Action: A Smart DBMS Bufferpool for SSDs
-                </a>
+                ACE-in-Action: A Smart DBMS Bufferpool for SSDs
               </div>
               <div class="mt-5 pub-authors" align="justify">
                 Teona Bagashbili, <b>Tarikul Islam Papon</b>, Manos Athanassoulis
               </div>
               <div class="mt-5 pub-venue" align="justify">
                 Proceedings of the ACM SIGMOD Management of Data (PACMMOD), 2025
+              </div>
+
+              <div class="pub-links">
+                <a href="https://dl.acm.org/doi/pdf/10.1145/3722212.3725077"
+                  target="_blank"
+                  title="Paper">
+                  <i class="fas fa-file-pdf pub-icon"></i>
+                </a>
+
+                <!-- <a href="VIDEO"
+                  target="_blank"
+                  title="Presentation Video">
+                  <i class="fab fa-youtube"></i>
+                </a>
+
+                <a href="SLIDES"
+                  target="_blank"
+                  title="Slides">
+                  <i class="fas fa-file-powerpoint"></i>
+                </a>
+
+                <a href="POSTER"
+                  target="_blank"
+                  title="Poster">
+                  <i class="fas fa-image"></i>
+                </a>
+
+                <a href="WEBSITE"
+                  target="_blank"
+                  title="Project Website">
+                  <i class="fas fa-globe"></i>
+                </a>
+
+                <a href="GITHUB"
+                  target="_blank"
+                  title="Source Code">
+                  <i class="fab fa-github"></i>
+                </a> -->
               </div>
             </li>
 
@@ -132,9 +277,7 @@
             <li class="pub-item">
               <div class="badge badge-pub">SIGMOD</div>
               <div class="mt-5 pub-title" align="justify">
-                <a href="https://dl.acm.org/doi/epdf/10.1145/3654928" target="_blank">
-                  CAVE: Concurrency-Aware Graph Processing on SSDs
-                </a>
+                CAVE: Concurrency-Aware Graph Processing on SSDs
               </div>
               <div class="mt-5 pub-authors" align="justify">
                 <b>Tarikul Islam Papon</b>, Taishan Chen, Shuo Zhang, Manos Athanassoulis
@@ -142,14 +285,50 @@
               <div class="mt-5 pub-venue" align="justify">
                 Proceedings of the ACM SIGMOD Management of Data (PACMMOD), 2024
               </div>
+
+              <div class="pub-links">
+                <a href="https://dl.acm.org/doi/epdf/10.1145/3654928"
+                  target="_blank"
+                  title="Paper">
+                  <i class="fas fa-file-pdf pub-icon"></i>
+                </a>
+
+                <!-- <a href="VIDEO"
+                  target="_blank"
+                  title="Presentation Video">
+                  <i class="fab fa-youtube"></i>
+                </a>
+
+                <a href="SLIDES"
+                  target="_blank"
+                  title="Slides">
+                  <i class="fas fa-file-powerpoint"></i>
+                </a>
+
+                <a href="POSTER"
+                  target="_blank"
+                  title="Poster">
+                  <i class="fas fa-image"></i>
+                </a>
+
+                <a href="WEBSITE"
+                  target="_blank"
+                  title="Project Website">
+                  <i class="fas fa-globe"></i>
+                </a>
+
+                <a href="GITHUB"
+                  target="_blank"
+                  title="Source Code">
+                  <i class="fab fa-github"></i>
+                </a> -->
+              </div>
             </li>
 
             <li class="pub-item">
               <div class="badge badge-pub">TKDE</div>
               <div class="mt-5 pub-title" align="justify">
-                <a href="https://www.cs.umb.edu/~tpapon/pdfs/tkde2023_papon.pdf" target="_blank">
-                  Effortless Locality on Data Systems Using Relational Fabric
-                </a>
+                Effortless Locality on Data Systems Using Relational Fabric
               </div>
               <div class="mt-5 pub-authors" align="justify">
                 <b>Tarikul Islam Papon</b>, Ju Hyoung Mun, Konstantinos Karatsenidis, Shahin Roozkhosh, Denis Hoornaert, Ahmed Sanaullah, Ulrich Drepper, Renato Mancuso, Manos Athanassoulis
@@ -157,14 +336,49 @@
               <div class="mt-5 pub-venue" align="justify">
                 IEEE Transactions on Knowledge and Data Engineering (TKDE), 2024.
               </div>
+              <div class="pub-links">
+                <a href="https://www.cs.umb.edu/~tpapon/pdfs/tkde2023_papon.pdf"
+                  target="_blank"
+                  title="Paper">
+                  <i class="fas fa-file-pdf pub-icon"></i>
+                </a>
+
+                <!-- <a href="VIDEO"
+                  target="_blank"
+                  title="Presentation Video">
+                  <i class="fab fa-youtube"></i>
+                </a>
+
+                <a href="SLIDES"
+                  target="_blank"
+                  title="Slides">
+                  <i class="fas fa-file-powerpoint"></i>
+                </a>
+
+                <a href="POSTER"
+                  target="_blank"
+                  title="Poster">
+                  <i class="fas fa-image"></i>
+                </a>
+
+                <a href="WEBSITE"
+                  target="_blank"
+                  title="Project Website">
+                  <i class="fas fa-globe"></i>
+                </a>
+
+                <a href="GITHUB"
+                  target="_blank"
+                  title="Source Code">
+                  <i class="fab fa-github"></i>
+                </a> -->
+              </div>
             </li>
 
             <li class="pub-item">
               <div class="badge badge-pub">ICDE</div>
               <div class="mt-5 pub-title" align="justify">
-                <a href="https://www.cs.umb.edu/~tpapon/pdfs/paper-icde24-phd-symposium.pdf" target="_blank">
-                  Enhancing Data Systems Performance by Exploiting SSD Concurrency & Asymmetry
-                </a>
+                Enhancing Data Systems Performance by Exploiting SSD Concurrency & Asymmetry
               </div>
               <div class="mt-5 pub-authors" align="justify">
                 <b>Tarikul Islam Papon</b>
@@ -172,20 +386,92 @@
               <div class="mt-5 pub-venue" align="justify">
                 Proceedings of the IEEE International Conference on Data Engineering (ICDE) PhD Symposium, 2024
               </div>
+              <div class="pub-links">
+                <a href="https://www.cs.umb.edu/~tpapon/pdfs/paper-icde24-phd-symposium.pdf"
+                  target="_blank"
+                  title="Paper">
+                  <i class="fas fa-file-pdf pub-icon"></i>
+                </a>
+
+                <!-- <a href="VIDEO"
+                  target="_blank"
+                  title="Presentation Video">
+                  <i class="fab fa-youtube"></i>
+                </a>
+
+                <a href="SLIDES"
+                  target="_blank"
+                  title="Slides">
+                  <i class="fas fa-file-powerpoint"></i>
+                </a>
+
+                <a href="POSTER"
+                  target="_blank"
+                  title="Poster">
+                  <i class="fas fa-image"></i>
+                </a>
+
+                <a href="WEBSITE"
+                  target="_blank"
+                  title="Project Website">
+                  <i class="fas fa-globe"></i>
+                </a>
+
+                <a href="GITHUB"
+                  target="_blank"
+                  title="Source Code">
+                  <i class="fab fa-github"></i>
+                </a> -->
+              </div>
             </li>
 
             <li class="pub-item">
               <div>(Under Review)</div>
               <div class="mt-5 pub-title" align="justify">
-                <a href="https://www.cs.umb.edu/~tpapon/pdfs/paper_hpts24_submission.pdf" target="_blank">
-                  Designing SSD-Conscious Data Systems
-                </a>
+                Designing SSD-Conscious Data Systems
               </div>
               <div class="mt-5 pub-authors" align="justify">
                 <b>Tarikul Islam Papon</b>
               </div>
               <div class="mt-5 pub-venue" align="justify">
                 HPTS Workshop, 2024
+              </div>
+              <div class="pub-links">
+                <a href="https://www.cs.umb.edu/~tpapon/pdfs/paper_hpts24_submission.pdf"
+                  target="_blank"
+                  title="Paper">
+                  <i class="fas fa-file-pdf pub-icon"></i>
+                </a>
+
+                <!-- <a href="VIDEO"
+                  target="_blank"
+                  title="Presentation Video">
+                  <i class="fab fa-youtube"></i>
+                </a>
+
+                <a href="SLIDES"
+                  target="_blank"
+                  title="Slides">
+                  <i class="fas fa-file-powerpoint"></i>
+                </a>
+
+                <a href="POSTER"
+                  target="_blank"
+                  title="Poster">
+                  <i class="fas fa-image"></i>
+                </a>
+
+                <a href="WEBSITE"
+                  target="_blank"
+                  title="Project Website">
+                  <i class="fas fa-globe"></i>
+                </a>
+
+                <a href="GITHUB"
+                  target="_blank"
+                  title="Source Code">
+                  <i class="fab fa-github"></i>
+                </a> -->
               </div>
             </li>
 
@@ -194,9 +480,7 @@
             <li class="pub-item">
               <div class="badge badge-pub">NeurIPS</div>
               <div class="mt-5 pub-title" align="justify">
-                <a href="https://mlforsystems.org/assets/papers/neurips2023/paper25.pdf" target="_blank">
-                  Silhouette: Toward Performance-Conscious and Transferable CPU Embeddings
-                </a>
+                Silhouette: Toward Performance-Conscious and Transferable CPU Embeddings
               </div>
               <div class="mt-5 pub-authors" align="justify">
                 <b>Tarikul Islam Papon</b>, Abdul Wasay
@@ -204,14 +488,49 @@
               <div class="mt-5 pub-venue" align="justify">
                 Workshop on ML for Systems at the Conference on Neural Information Processing Systems (NeurIPS), 2023
               </div>
+              <div class="pub-links">
+                <a href="https://mlforsystems.org/assets/papers/neurips2023/paper25.pdf"
+                  target="_blank"
+                  title="Paper">
+                  <i class="fas fa-file-pdf pub-icon"></i>
+                </a>
+
+                <!-- <a href="VIDEO"
+                  target="_blank"
+                  title="Presentation Video">
+                  <i class="fab fa-youtube"></i>
+                </a>
+
+                <a href="SLIDES"
+                  target="_blank"
+                  title="Slides">
+                  <i class="fas fa-file-powerpoint"></i>
+                </a>
+
+                <a href="POSTER"
+                  target="_blank"
+                  title="Poster">
+                  <i class="fas fa-image"></i>
+                </a>
+
+                <a href="WEBSITE"
+                  target="_blank"
+                  title="Project Website">
+                  <i class="fas fa-globe"></i>
+                </a>
+
+                <a href="GITHUB"
+                  target="_blank"
+                  title="Source Code">
+                  <i class="fab fa-github"></i>
+                </a> -->
+              </div>
             </li>
 
             <li class="pub-item">
               <div class="badge badge-pub">VLDB</div>
               <div class="mt-5 pub-title" align="justify">
-                <a href="https://www.vldb.org/pvldb/vol16/p3950-mun.pdf" target="_blank">
-                  On-the-fly Data Transformation in Action
-                </a>
+                On-the-fly Data Transformation in Action
               </div>
               <div class="mt-5 pub-authors" align="justify">
                 Ju Hyoung Mun, Konstantinos Karatsenidis, <b>Tarikul Islam Papon</b>, Shahin Roozkhosh, Denis Hoornaert, Ulrich Drepper, Ahmed Sanaullah, Renato Mancuso, Manos Athanassoulis
@@ -219,14 +538,49 @@
               <div class="mt-5 pub-venue" align="justify">
                 Proceedings of the VLDB Endowment, 2023
               </div>
+              <div class="pub-links">
+                <a href="https://www.vldb.org/pvldb/vol16/p3950-mun.pdf"
+                  target="_blank"
+                  title="Paper">
+                  <i class="fas fa-file-pdf pub-icon"></i>
+                </a>
+
+                <!-- <a href="VIDEO"
+                  target="_blank"
+                  title="Presentation Video">
+                  <i class="fab fa-youtube"></i>
+                </a>
+
+                <a href="SLIDES"
+                  target="_blank"
+                  title="Slides">
+                  <i class="fas fa-file-powerpoint"></i>
+                </a>
+
+                <a href="POSTER"
+                  target="_blank"
+                  title="Poster">
+                  <i class="fas fa-image"></i>
+                </a>
+
+                <a href="WEBSITE"
+                  target="_blank"
+                  title="Project Website">
+                  <i class="fas fa-globe"></i>
+                </a>
+
+                <a href="GITHUB"
+                  target="_blank"
+                  title="Source Code">
+                  <i class="fab fa-github"></i>
+                </a> -->
+              </div>
             </li>
 
             <li class="pub-item">
               <div class="badge badge-pub">TODS</div>
               <div class="mt-5 pub-title" align="justify">
-                <a href="https://dl.acm.org/doi/pdf/10.1145/3599724" target="_blank">
-                  Enabling Timely and Persistent Deletion in LSM-Engines
-                </a>
+                Enabling Timely and Persistent Deletion in LSM-Engines
               </div>
               <div class="mt-5 pub-authors" align="justify">
                 Subhadeep Sarkar, <b>Tarikul Islam Papon</b>, Dimitris Staratzis, Zichen Zhu, Manos Athanassoulis
@@ -234,14 +588,49 @@
               <div class="mt-5 pub-venue" align="justify">
                 ACM Transactions on Database Systems (TODS), 2023
               </div>
+              <div class="pub-links">
+                <a href="https://dl.acm.org/doi/pdf/10.1145/3599724"
+                  target="_blank"
+                  title="Paper">
+                  <i class="fas fa-file-pdf pub-icon"></i>
+                </a>
+
+                <!-- <a href="VIDEO"
+                  target="_blank"
+                  title="Presentation Video">
+                  <i class="fab fa-youtube"></i>
+                </a>
+
+                <a href="SLIDES"
+                  target="_blank"
+                  title="Slides">
+                  <i class="fas fa-file-powerpoint"></i>
+                </a>
+
+                <a href="POSTER"
+                  target="_blank"
+                  title="Poster">
+                  <i class="fas fa-image"></i>
+                </a>
+
+                <a href="WEBSITE"
+                  target="_blank"
+                  title="Project Website">
+                  <i class="fas fa-globe"></i>
+                </a>
+
+                <a href="GITHUB"
+                  target="_blank"
+                  title="Source Code">
+                  <i class="fab fa-github"></i>
+                </a> -->
+              </div>
             </li>
 
             <li class="pub-item">
               <div class="badge badge-pub">ICDE</div>
               <div class="mt-5 pub-title" align="justify">
-                <a href="https://www.cs.umb.edu/~tpapon/pdfs/icde23-papon.pdf" target="_blank">
-                  ACEing the Bufferpool Management Paradigm for Modern Storage Devices
-                </a>
+                ACEing the Bufferpool Management Paradigm for Modern Storage Devices
               </div>
               <div class="mt-5 pub-authors" align="justify">
                 <b>Tarikul Islam Papon</b>, Manos Athanassoulis
@@ -249,14 +638,49 @@
               <div class="mt-5 pub-venue" align="justify">
                 Proceedings of the IEEE International Conference on Data Engineering (ICDE), 2023
               </div>
+              <div class="pub-links">
+                <a href="https://www.cs.umb.edu/~tpapon/pdfs/icde23-papon.pdf"
+                  target="_blank"
+                  title="Paper">
+                  <i class="fas fa-file-pdf pub-icon"></i>
+                </a>
+
+                <!-- <a href="VIDEO"
+                  target="_blank"
+                  title="Presentation Video">
+                  <i class="fab fa-youtube"></i>
+                </a>
+
+                <a href="SLIDES"
+                  target="_blank"
+                  title="Slides">
+                  <i class="fas fa-file-powerpoint"></i>
+                </a>
+
+                <a href="POSTER"
+                  target="_blank"
+                  title="Poster">
+                  <i class="fas fa-image"></i>
+                </a>
+
+                <a href="WEBSITE"
+                  target="_blank"
+                  title="Project Website">
+                  <i class="fas fa-globe"></i>
+                </a>
+
+                <a href="GITHUB"
+                  target="_blank"
+                  title="Source Code">
+                  <i class="fab fa-github"></i>
+                </a> -->
+              </div>
             </li>
 
             <li class="pub-item">
               <div class="badge badge-pub">ICDE</div>
               <div class="mt-5 pub-title" align="justify">
-                <a href="https://www.cs.umb.edu/~tpapon/pdfs/icde23-vision.pdf" target="_blank">
-                  Relational Fabric: Transparent Data Transformation [Vision]
-                </a>
+                Relational Fabric: Transparent Data Transformation [Vision]
               </div>
               <div class="mt-5 pub-authors" align="justify">
                 <b>Tarikul Islam Papon</b>, Ju Hyoung Mun, Shahin Roozkhosh, Denis Hoornaert, Ahmed Sanaullah, Ulrich Drepper, Renato Mancuso, Manos Athanassoulis
@@ -264,14 +688,49 @@
               <div class="mt-5 pub-venue" align="justify">
                 Proceedings of the IEEE International Conference on Data Engineering (ICDE), 2023
               </div>
+              <div class="pub-links">
+                <a href="https://www.cs.umb.edu/~tpapon/pdfs/icde23-vision.pdf"
+                  target="_blank"
+                  title="Paper">
+                  <i class="fas fa-file-pdf pub-icon"></i>
+                </a>
+
+                <!-- <a href="VIDEO"
+                  target="_blank"
+                  title="Presentation Video">
+                  <i class="fab fa-youtube"></i>
+                </a>
+
+                <a href="SLIDES"
+                  target="_blank"
+                  title="Slides">
+                  <i class="fas fa-file-powerpoint"></i>
+                </a>
+
+                <a href="POSTER"
+                  target="_blank"
+                  title="Poster">
+                  <i class="fas fa-image"></i>
+                </a>
+
+                <a href="WEBSITE"
+                  target="_blank"
+                  title="Project Website">
+                  <i class="fas fa-globe"></i>
+                </a>
+
+                <a href="GITHUB"
+                  target="_blank"
+                  title="Source Code">
+                  <i class="fab fa-github"></i>
+                </a> -->
+              </div>
             </li>
 
             <li class="pub-item">
               <div class="badge badge-pub">CPS-IoT</div>
               <div class="mt-5 pub-title" align="justify">
-                <a href="https://dl.acm.org/doi/pdf/10.1145/3576914.3587546" target="_blank">
-                  Software-Shaped Platforms
-                </a>
+                Software-Shaped Platforms
               </div>
               <div class="mt-5 pub-authors" align="justify">
                 Renato Mancuso, Shahin Roozkhosh, Denis Hoornaert, Ju Hyoung Mun, <b>Tarikul Islam Papon</b>, Manos Athanassoulis
@@ -279,20 +738,92 @@
               <div class="mt-5 pub-venue" align="justify">
                 Proceedings of the Cyber-Physical Systems and Internet of Things Week (CPS-IoT Week Workshops), 2023
               </div>
+              <div class="pub-links">
+                <a href="https://dl.acm.org/doi/pdf/10.1145/3576914.3587546"
+                  target="_blank"
+                  title="Paper">
+                  <i class="fas fa-file-pdf pub-icon"></i>
+                </a>
+
+                <!-- <a href="VIDEO"
+                  target="_blank"
+                  title="Presentation Video">
+                  <i class="fab fa-youtube"></i>
+                </a>
+
+                <a href="SLIDES"
+                  target="_blank"
+                  title="Slides">
+                  <i class="fas fa-file-powerpoint"></i>
+                </a>
+
+                <a href="POSTER"
+                  target="_blank"
+                  title="Poster">
+                  <i class="fas fa-image"></i>
+                </a>
+
+                <a href="WEBSITE"
+                  target="_blank"
+                  title="Project Website">
+                  <i class="fas fa-globe"></i>
+                </a>
+
+                <a href="GITHUB"
+                  target="_blank"
+                  title="Source Code">
+                  <i class="fab fa-github"></i>
+                </a> -->
+              </div>
             </li>
 
             <li class="pub-item">
               <div class="badge badge-pub">EDBT</div>
               <div class="mt-5 pub-title" align="justify">
-                <a href="https://openproceedings.org/2023/conf/edbt/paper-177.pdf" target="_blank">
-                  Relational Memory: Native In-Memory Accesses on Rows and Columns
-                </a>
+                Relational Memory: Native In-Memory Accesses on Rows and Columns
               </div>
               <div class="mt-5 pub-authors" align="justify">
                 Shahin Roozkhosh, Denis Hoornaert, Ju Hyoung Mun, <b>Tarikul Islam Papon</b>, Ahmed Sanaullah, Ulrich Drepper, Renato Mancuso, Manos Athanassoulis
               </div>
               <div class="mt-5 pub-venue" align="justify">
                 Proceedings of the International Conference on Extending Database Technology (EDBT), 2023
+              </div>
+              <div class="pub-links">
+                <a href="https://openproceedings.org/2023/conf/edbt/paper-177.pdf"
+                  target="_blank"
+                  title="Paper">
+                  <i class="fas fa-file-pdf pub-icon"></i>
+                </a>
+
+                <!-- <a href="VIDEO"
+                  target="_blank"
+                  title="Presentation Video">
+                  <i class="fab fa-youtube"></i>
+                </a>
+
+                <a href="SLIDES"
+                  target="_blank"
+                  title="Slides">
+                  <i class="fas fa-file-powerpoint"></i>
+                </a>
+
+                <a href="POSTER"
+                  target="_blank"
+                  title="Poster">
+                  <i class="fas fa-image"></i>
+                </a>
+
+                <a href="WEBSITE"
+                  target="_blank"
+                  title="Project Website">
+                  <i class="fas fa-globe"></i>
+                </a>
+
+                <a href="GITHUB"
+                  target="_blank"
+                  title="Source Code">
+                  <i class="fab fa-github"></i>
+                </a> -->
               </div>
             </li>
 
@@ -301,9 +832,7 @@
             <li class="pub-item">
               <div class="badge badge-pub">DEBull</div>
               <div class="mt-5 pub-title" align="justify">
-                <a href="http://sites.computer.org/debull/A22mar/p21.pdf" target="_blank">
-                  Building Deletion-Compliant Data Systems
-                </a>
+                Building Deletion-Compliant Data Systems
               </div>
               <div class="mt-5 pub-authors" align="justify">
                 Manos Athanassoulis, Subhadeep Sarkar, <b>Tarikul Islam Papon</b>, Zichen Zhu, Dimitris Staratzis
@@ -311,20 +840,92 @@
               <div class="mt-5 pub-venue" align="justify">
                 IEEE Data Engineering Bulletin (IEEE DEBull), 2022
               </div>
+              <div class="pub-links">
+                <a href="http://sites.computer.org/debull/A22mar/p21.pdf"
+                  target="_blank"
+                  title="Paper">
+                  <i class="fas fa-file-pdf pub-icon"></i>
+                </a>
+
+                <!-- <a href="VIDEO"
+                  target="_blank"
+                  title="Presentation Video">
+                  <i class="fab fa-youtube"></i>
+                </a>
+
+                <a href="SLIDES"
+                  target="_blank"
+                  title="Slides">
+                  <i class="fas fa-file-powerpoint"></i>
+                </a>
+
+                <a href="POSTER"
+                  target="_blank"
+                  title="Poster">
+                  <i class="fas fa-image"></i>
+                </a>
+
+                <a href="WEBSITE"
+                  target="_blank"
+                  title="Project Website">
+                  <i class="fas fa-globe"></i>
+                </a>
+
+                <a href="GITHUB"
+                  target="_blank"
+                  title="Source Code">
+                  <i class="fab fa-github"></i>
+                </a> -->
+              </div>
             </li>
 
             <li class="pub-item">
               <div class="badge badge-pub">SNAM</div>
               <div class="mt-5 pub-title" align="justify">
-                <a href="https://link.springer.com/article/10.1007/s13278-022-00862-3" target="_blank">
-                  UACD: A Local Approach for Identifying the Most Influential Spreaders in Twitter in a Distributed Environment
-                </a>
+                UACD: A Local Approach for Identifying the Most Influential Spreaders in Twitter in a Distributed Environment
               </div>
               <div class="mt-5 pub-authors" align="justify">
                 T. M. Tariq Adnan, Md. Saiful Islam, <b>Tarikul Islam Papon</b>, Shourav Nath, Muhammad Abdullah Adnan
               </div>
               <div class="mt-5 pub-venue" align="justify">
                 Social Network Analysis and Mining (SNAM), Springer, 2022
+              </div>
+              <div class="pub-links">
+                <a href="https://link.springer.com/article/10.1007/s13278-022-00862-3"
+                  target="_blank"
+                  title="Paper">
+                  <i class="fas fa-file-pdf pub-icon"></i>
+                </a>
+
+                <!-- <a href="VIDEO"
+                  target="_blank"
+                  title="Presentation Video">
+                  <i class="fab fa-youtube"></i>
+                </a>
+
+                <a href="SLIDES"
+                  target="_blank"
+                  title="Slides">
+                  <i class="fas fa-file-powerpoint"></i>
+                </a>
+
+                <a href="POSTER"
+                  target="_blank"
+                  title="Poster">
+                  <i class="fas fa-image"></i>
+                </a>
+
+                <a href="WEBSITE"
+                  target="_blank"
+                  title="Project Website">
+                  <i class="fas fa-globe"></i>
+                </a>
+
+                <a href="GITHUB"
+                  target="_blank"
+                  title="Source Code">
+                  <i class="fab fa-github"></i>
+                </a> -->
               </div>
             </li>
 
@@ -333,9 +934,7 @@
             <li class="pub-item">
               <div class="badge badge-pub">DaMoN</div>
               <div class="mt-5 pub-title" align="justify">
-                <a href="https://www.cs.umb.edu/~tpapon/pdfs/2021_TIP_MA_Damon.pdf" target="_blank">
-                  A Parametric I/O Model for Modern Storage Devices
-                </a>
+                A Parametric I/O Model for Modern Storage Devices
               </div>
               <div class="mt-5 pub-authors" align="justify">
                 <b>Tarikul Islam Papon</b>, Manos Athanassoulis
@@ -343,20 +942,92 @@
               <div class="mt-5 pub-venue" align="justify">
                 Proceedings of the International Workshop on Data Management on New Hardware (DaMoN), 2021
               </div>
+              <div class="pub-links">
+                <a href="https://www.cs.umb.edu/~tpapon/pdfs/2021_TIP_MA_Damon.pdf"
+                  target="_blank"
+                  title="Paper">
+                  <i class="fas fa-file-pdf pub-icon"></i>
+                </a>
+
+                <!-- <a href="VIDEO"
+                  target="_blank"
+                  title="Presentation Video">
+                  <i class="fab fa-youtube"></i>
+                </a>
+
+                <a href="SLIDES"
+                  target="_blank"
+                  title="Slides">
+                  <i class="fas fa-file-powerpoint"></i>
+                </a>
+
+                <a href="POSTER"
+                  target="_blank"
+                  title="Poster">
+                  <i class="fas fa-image"></i>
+                </a>
+
+                <a href="WEBSITE"
+                  target="_blank"
+                  title="Project Website">
+                  <i class="fas fa-globe"></i>
+                </a>
+
+                <a href="GITHUB"
+                  target="_blank"
+                  title="Source Code">
+                  <i class="fab fa-github"></i>
+                </a> -->
+              </div>
             </li>
 
             <li class="pub-item">
               <div class="badge badge-pub">CIDR</div>
               <div class="mt-5 pub-title" align="justify">
-                <a href="https://www.cs.umb.edu/~tpapon/pdfs/2021_MTIP_MA_CIDR.pdf" target="_blank">
-                  The Need for a New I/O Model
-                </a>
+                The Need for a New I/O Model
               </div>
               <div class="mt-5 pub-authors" align="justify">
                 <b>Tarikul Islam Papon</b>, Manos Athanassoulis
               </div>
               <div class="mt-5 pub-venue" align="justify">
                 Conference on Innovative Data Systems Research (CIDR), 2021 (Abstract)
+              </div>
+              <div class="pub-links">
+                <a href="https://www.cs.umb.edu/~tpapon/pdfs/2021_MTIP_MA_CIDR.pdf"
+                  target="_blank"
+                  title="Paper">
+                  <i class="fas fa-file-pdf pub-icon"></i>
+                </a>
+
+                <!-- <a href="VIDEO"
+                  target="_blank"
+                  title="Presentation Video">
+                  <i class="fab fa-youtube"></i>
+                </a>
+
+                <a href="SLIDES"
+                  target="_blank"
+                  title="Slides">
+                  <i class="fas fa-file-powerpoint"></i>
+                </a>
+
+                <a href="POSTER"
+                  target="_blank"
+                  title="Poster">
+                  <i class="fas fa-image"></i>
+                </a>
+
+                <a href="WEBSITE"
+                  target="_blank"
+                  title="Project Website">
+                  <i class="fas fa-globe"></i>
+                </a>
+
+                <a href="GITHUB"
+                  target="_blank"
+                  title="Source Code">
+                  <i class="fab fa-github"></i>
+                </a> -->
               </div>
             </li>
 
@@ -365,15 +1036,50 @@
             <li class="pub-item">
               <div class="badge badge-pub">SIGMOD</div>
               <div class="mt-5 pub-title" align="justify">
-                <a href="https://www.cs.umb.edu/~tpapon/pdfs/2020_SS_MTIP_DS_MA.pdf" target="_blank">
-                  Lethe: A Tunable Delete-Aware LSM Engine
-                </a>
+                Lethe: A Tunable Delete-Aware LSM Engine
               </div>
               <div class="mt-5 pub-authors" align="justify">
                 Subhadeep Sarkar, <b>Tarikul Islam Papon</b>, Dimitris Staratzis, Manos Athanassoulis
               </div>
               <div class="mt-5 pub-venue" align="justify">
                 Proceedings of the 2020 ACM SIGMOD International Conference on Management of Data, 2020
+              </div>
+              <div class="pub-links">
+                <a href="https://www.cs.umb.edu/~tpapon/pdfs/2020_SS_MTIP_DS_MA.pdf"
+                  target="_blank"
+                  title="Paper">
+                  <i class="fas fa-file-pdf pub-icon"></i>
+                </a>
+
+                <a href="https://www.youtube.com/watch?v=P0qUS2BwATg"
+                  target="_blank"
+                  title="Presentation Video">
+                  <i class="fab fa-youtube pub-icon"></i>
+                </a>
+
+                <a href="https://subhadeep.net/assets/resources/Lethe-slides_SIGMOD.pdf"
+                  target="_blank"
+                  title="Slides">
+                  <i class="fas fa-file-powerpoint pub-icon"></i>
+                </a>
+
+                <a href="https://subhadeep.net/assets/resources/Lethe-poster_NEDBD.pdf"
+                  target="_blank"
+                  title="Poster">
+                  <i class="fas fa-image pub-icon"></i>
+                </a>
+
+                <a href="https://disc-projects.bu.edu/lethe/"
+                  target="_blank"
+                  title="Project Website">
+                  <i class="fas fa-globe pub-icon"></i>
+                </a>
+
+                <a href="https://github.com/BU-DiSC/lethe-codebase"
+                  target="_blank"
+                  title="Source Code">
+                  <i class="fab fa-github pub-icon"></i>
+                </a>
               </div>
             </li>
 
@@ -382,15 +1088,50 @@
             <li class="pub-item">
               <div class="badge badge-high">M.Sc. Thesis</div>
               <div class="mt-5 pub-title" align="justify">
-                <a href="https://www.cs.umb.edu/~tpapon/pdfs/Pg_Thesis.pdf" target="_blank">
-                  Design And Development Of A Deep Learning Based Application For Detecting Diabetic Retinopathy
-                </a>
+                Design And Development Of A Deep Learning Based Application For Detecting Diabetic Retinopathy
               </div>
               <div class="mt-5 pub-authors" align="justify">
                 <b>Tarikul Islam Papon</b>
               </div>
               <div class="mt-5 pub-venue" align="justify">
                 M.Sc. Engineering Thesis, 2019, Department of CSE, BUET, Bangladesh
+              </div>
+              <div class="pub-links">
+                <a href="https://www.cs.umb.edu/~tpapon/pdfs/Pg_Thesis.pdf"
+                  target="_blank"
+                  title="Paper">
+                  <i class="fas fa-file-pdf pub-icon"></i>
+                </a>
+
+                <!-- <a href="VIDEO"
+                  target="_blank"
+                  title="Presentation Video">
+                  <i class="fab fa-youtube"></i>
+                </a>
+
+                <a href="SLIDES"
+                  target="_blank"
+                  title="Slides">
+                  <i class="fas fa-file-powerpoint"></i>
+                </a>
+
+                <a href="POSTER"
+                  target="_blank"
+                  title="Poster">
+                  <i class="fas fa-image"></i>
+                </a>
+
+                <a href="WEBSITE"
+                  target="_blank"
+                  title="Project Website">
+                  <i class="fas fa-globe"></i>
+                </a>
+
+                <a href="GITHUB"
+                  target="_blank"
+                  title="Source Code">
+                  <i class="fab fa-github"></i>
+                </a> -->
               </div>
             </li>
 
@@ -399,15 +1140,50 @@
             <li class="pub-item">
               <div class="badge badge-pub">EnvSci Journal</div>
               <div class="mt-5 pub-title" align="justify">
-                <a href="https://www.cs.umb.edu/~tpapon/pdfs/2017_STK_MTIP.pdf" target="_blank">
-                  Rainwater Harvesting System: An Approach for Optimum Tank Size Design and Assessment of Efficiency
-                </a>
+                Rainwater Harvesting System: An Approach for Optimum Tank Size Design and Assessment of Efficiency
               </div>
               <div class="mt-5 pub-authors" align="justify">
                 Sadia Tamanna Khan, Ashef Ainan Baksh, <b>Tarikul Islam Papon</b>, Muhammad Ashraf Ali
               </div>
               <div class="mt-5 pub-venue" align="justify">
                 International Journal Of Environmental Science and Development, 8(1), 37-43, 2017
+              </div>
+              <div class="pub-links">
+                <a href="https://www.cs.umb.edu/~tpapon/pdfs/2017_STK_MTIP.pdf"
+                  target="_blank"
+                  title="Paper">
+                  <i class="fas fa-file-pdf pub-icon"></i>
+                </a>
+
+                <!-- <a href="VIDEO"
+                  target="_blank"
+                  title="Presentation Video">
+                  <i class="fab fa-youtube"></i>
+                </a>
+
+                <a href="SLIDES"
+                  target="_blank"
+                  title="Slides">
+                  <i class="fas fa-file-powerpoint"></i>
+                </a>
+
+                <a href="POSTER"
+                  target="_blank"
+                  title="Poster">
+                  <i class="fas fa-image"></i>
+                </a>
+
+                <a href="WEBSITE"
+                  target="_blank"
+                  title="Project Website">
+                  <i class="fas fa-globe"></i>
+                </a>
+
+                <a href="GITHUB"
+                  target="_blank"
+                  title="Source Code">
+                  <i class="fab fa-github"></i>
+                </a> -->
               </div>
             </li>
 
@@ -416,9 +1192,7 @@
             <li class="pub-item">
               <div class="badge badge-pub">NSysS</div>
               <div class="mt-5 pub-title" align="justify">
-                <a href="https://www.cs.umb.edu/~tpapon/pdfs/2015b_MTIP_NS_IA.pdf" target="_blank">
-                  Non-invasive Heart Rate Measuring Smartphone Applications using On-board Cameras: A Short Survey
-                </a>
+                Non-invasive Heart Rate Measuring Smartphone Applications using On-board Cameras: A Short Survey
               </div>
               <div class="mt-5 pub-authors" align="justify">
                 <b>Tarikul Islam Papon</b>, Ishtiyaque Ahmad, Nazmus Saquib, Ashikur Rahman
@@ -426,14 +1200,49 @@
               <div class="mt-5 pub-venue" align="justify">
                 The 1st International Conference on Networking Systems and Security 2015 (NSysS), January 5-7, 2015, Dhaka, Bangladesh
               </div>
+              <div class="pub-links">
+                <a href="https://www.cs.umb.edu/~tpapon/pdfs/2015b_MTIP_NS_IA.pdf"
+                  target="_blank"
+                  title="Paper">
+                  <i class="fas fa-file-pdf pub-icon"></i>
+                </a>
+
+                <!-- <a href="VIDEO"
+                  target="_blank"
+                  title="Presentation Video">
+                  <i class="fab fa-youtube"></i>
+                </a>
+
+                <a href="SLIDES"
+                  target="_blank"
+                  title="Slides">
+                  <i class="fas fa-file-powerpoint"></i>
+                </a>
+
+                <a href="POSTER"
+                  target="_blank"
+                  title="Poster">
+                  <i class="fas fa-image"></i>
+                </a>
+
+                <a href="WEBSITE"
+                  target="_blank"
+                  title="Project Website">
+                  <i class="fas fa-globe"></i>
+                </a>
+
+                <a href="GITHUB"
+                  target="_blank"
+                  title="Source Code">
+                  <i class="fab fa-github"></i>
+                </a> -->
+              </div>
             </li>
 
             <li class="pub-item">
               <div class="badge badge-pub">NSysS</div>
               <div class="mt-5 pub-title" align="justify">
-                <a href="https://www.cs.umb.edu/~tpapon/pdfs/2015a_NS_MTIP_IA.pdf" target="_blank">
-                  Measurement of Heart Rate Using Photoplethysmography
-                </a>
+                Measurement of Heart Rate Using Photoplethysmography
               </div>
               <div class="mt-5 pub-authors" align="justify">
                 Nazmus Saquib, <b>Tarikul Islam Papon</b>, Ishtiyaque Ahmad, Ashikur Rahman
@@ -441,20 +1250,92 @@
               <div class="mt-5 pub-venue" align="justify">
                 The 1st International Conference on Networking Systems and Security (NSysS), January 5-7, 2015, Dhaka, Bangladesh
               </div>
+              <div class="pub-links">
+                <a href="https://www.cs.umb.edu/~tpapon/pdfs/2015a_NS_MTIP_IA.pdf"
+                  target="_blank"
+                  title="Paper">
+                  <i class="fas fa-file-pdf pub-icon"></i>
+                </a>
+
+                <!-- <a href="VIDEO"
+                  target="_blank"
+                  title="Presentation Video">
+                  <i class="fab fa-youtube"></i>
+                </a>
+
+                <a href="SLIDES"
+                  target="_blank"
+                  title="Slides">
+                  <i class="fas fa-file-powerpoint"></i>
+                </a>
+
+                <a href="POSTER"
+                  target="_blank"
+                  title="Poster">
+                  <i class="fas fa-image"></i>
+                </a>
+
+                <a href="WEBSITE"
+                  target="_blank"
+                  title="Project Website">
+                  <i class="fas fa-globe"></i>
+                </a>
+
+                <a href="GITHUB"
+                  target="_blank"
+                  title="Source Code">
+                  <i class="fab fa-github"></i>
+                </a> -->
+              </div>
             </li>
 
             <li class="pub-item">
               <div class="badge badge-high">B.Sc. Thesis</div>
               <div class="mt-5 pub-title" align="justify">
-                <a href="https://www.cs.umb.edu/~tpapon/pdfs/Ug_Thesis.pdf" target="_blank">
-                  Photoplethysmographic Analysis of Optical Signals : A Single Device to Measure All the Vital Signs
-                </a>
+                Photoplethysmographic Analysis of Optical Signals : A Single Device to Measure All the Vital Signs
               </div>
               <div class="mt-5 pub-authors" align="justify">
                 <b>Tarikul Islam Papon</b>, Nazmus Saquib, Ishtiyaque Ahmad
               </div>
               <div class="mt-5 pub-venue" align="justify">
                 B.Sc. Engineering Thesis, 2015, Department of CSE, BUET, Bangladesh
+              </div>
+              <div class="pub-links">
+                <a href="https://www.cs.umb.edu/~tpapon/pdfs/Ug_Thesis.pdf"
+                  target="_blank"
+                  title="Paper">
+                  <i class="fas fa-file-pdf pub-icon"></i>
+                </a>
+
+                <!-- <a href="VIDEO"
+                  target="_blank"
+                  title="Presentation Video">
+                  <i class="fab fa-youtube"></i>
+                </a>
+
+                <a href="SLIDES"
+                  target="_blank"
+                  title="Slides">
+                  <i class="fas fa-file-powerpoint"></i>
+                </a>
+
+                <a href="POSTER"
+                  target="_blank"
+                  title="Poster">
+                  <i class="fas fa-image"></i>
+                </a>
+
+                <a href="WEBSITE"
+                  target="_blank"
+                  title="Project Website">
+                  <i class="fas fa-globe"></i>
+                </a>
+
+                <a href="GITHUB"
+                  target="_blank"
+                  title="Source Code">
+                  <i class="fab fa-github"></i>
+                </a> -->
               </div>
             </li>
           </ul>
