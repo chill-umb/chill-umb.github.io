@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-  <link rel="stylesheet" href="styles.css?v=4" />
+  <link rel="stylesheet" href="styles.css?v=6" />
 </head>
 <body>
 
@@ -55,22 +55,61 @@
   </div>
 </section>
 
-<div class="hero-desc">
-  We design hardware-aware data management systems for modern storage devices — building smarter, faster, and more autonomous data systems for the next generation of computing.
-</div>
-
 <!-- ─── Publications ───────────────────────────────────────────────────── -->
 <section class="section" id="publications">
   <div class="container">
     <h2 class="section-title">Publications</h2>
     <div class="divider"></div>
+    <div class="pub-filters">
+      <div class="pub-search">
+        <span class="pub-search-icon">🔍</span>
+        <input type="search" id="pubSearch" placeholder="Search title, author or venue…" autocomplete="off" aria-label="Search publications" />
+      </div>
+      <select id="pubYear" aria-label="Filter by year">
+        <option value="">All years</option>
+          <option value="2026">2026</option>
+          <option value="2025">2025</option>
+          <option value="2024">2024</option>
+          <option value="2023">2023</option>
+          <option value="2022">2022</option>
+          <option value="2021">2021</option>
+          <option value="2020">2020</option>
+          <option value="2019">2019</option>
+          <option value="2017">2017</option>
+          <option value="2015">2015</option>
+      </select>
+      <select id="pubTag" aria-label="Filter by venue tag">
+        <option value="">All venues</option>
+          <option value="CIDR">CIDR</option>
+          <option value="CPS-IoT">CPS-IoT</option>
+          <option value="DaMoN">DaMoN</option>
+          <option value="DEBull">DEBull</option>
+          <option value="DSI">DSI</option>
+          <option value="EDBT">EDBT</option>
+          <option value="EnvSci Journal">EnvSci Journal</option>
+          <option value="HPTS">HPTS</option>
+          <option value="ICDE">ICDE</option>
+          <option value="IRAI">IRAI</option>
+          <option value="NeurIPS">NeurIPS</option>
+          <option value="NSysS">NSysS</option>
+          <option value="SIGMOD">SIGMOD</option>
+          <option value="SNAM">SNAM</option>
+          <option value="Thesis">Thesis</option>
+          <option value="TKDE">TKDE</option>
+          <option value="TODS">TODS</option>
+          <option value="TPCTC">TPCTC</option>
+          <option value="VLDB">VLDB</option>
+      </select>
+      <button type="button" id="pubClear" class="pub-clear">Clear</button>
+      <span class="pub-count" id="pubCount"></span>
+    </div>
+
     <div class="container mt-3">
 		  <div class="row">
 		    <div class="col">
           <ul>
-            <h2 class="pub-year">2026</h2>
-            
-            <li class="pub-item">
+                        <h2 class="pub-year" data-year="2026">2026</h2>
+            <li class="pub-item" data-year="2026" data-tag="SIGMOD" data-text="SIGMOD ReStore: A Reinforcement Learning Approach for Data Migration in Multi-Tiered Storage Tianru Zhang, Tarikul Islam Papon, Teona Bagashbili, Salman Toor, Manos Athanassoulis Proceedings of the ACM SIGMOD International Conference on Management of Data, 2026 --&gt;">
               <div class="badge badge-pub">SIGMOD</div>
               <div class="mt-5 pub-title" align="justify">
                 ReStore: A Reinforcement Learning Approach for Data Migration in Multi-Tiered Storage
@@ -119,8 +158,7 @@
                 </a> -->
               </div>
             </li>
-
-            <li class="pub-item">
+            <li class="pub-item" data-year="2026" data-tag="VLDB" data-text="VLDB ReStore-in-Action: Adaptive Multi-Tier Storage Management via Intelligent Data Migration Policy Shadman Saqib Eusuf, Tianru Zhang, Teona Bagashbili, Manos Athanassoulis, Tarikul Islam Papon Proceedings of the VLDB Endowment, 2026 --&gt;">
               <div class="badge badge-pub">VLDB</div>
               <div class="mt-5 pub-title" align="justify">
                 ReStore-in-Action: Adaptive Multi-Tier Storage Management via Intelligent Data Migration Policy
@@ -169,8 +207,28 @@
                 </a>
               </div> -->
             </li>
+            <li class="pub-item" data-year="2026" data-tag="TPCTC" data-text="TPCTC BufBench: A Benchmarking Framework for Buffer Pool Analysis in PostgreSQL Aroma Hoque, Tarikul Islam Papon Proceedings of the TPC Technology Conference on Performance Evaluation and Benchmarking (TPCTC), 2026 --&gt;">
+              <div class="badge badge-pub">TPCTC</div>
+              <div class="mt-5 pub-title" align="justify">
+                BufBench: A Benchmarking Framework for Buffer Pool Analysis in PostgreSQL
+              </div>
+              <div class="mt-5 pub-authors" align="justify">
+                Aroma Hoque, <b>Tarikul Islam Papon</b>
+              </div>
+              <div class="mt-5 pub-venue" align="justify">
+                Proceedings of the TPC Technology Conference on Performance Evaluation and Benchmarking (TPCTC), 2026
+              </div>
 
-            <li class="pub-item">
+              <!-- <div class="pub-links">
+                <a href="PAPER" target="_blank" title="Paper"><i class="fas fa-file-pdf pub-icon"></i></a>
+                <a href="VIDEO" target="_blank" title="Presentation Video"><i class="fab fa-youtube pub-icon"></i></a>
+                <a href="SLIDES" target="_blank" title="Slides"><i class="fas fa-file-powerpoint pub-icon"></i></a>
+                <a href="POSTER" target="_blank" title="Poster"><i class="fas fa-image pub-icon"></i></a>
+                <a href="WEBSITE" target="_blank" title="Project Website"><i class="fas fa-globe pub-icon"></i></a>
+                <a href="GITHUB" target="_blank" title="Source Code"><i class="fab fa-github pub-icon"></i></a>
+              </div> -->
+            </li>
+            <li class="pub-item" data-year="2026" data-tag="DaMoN" data-text="DaMoN ZARC: Re-inventing Zone Allocation for LSMs on ZNS SSD Farhan S. Chowdhury, Shadman Saqib Eusuf, Subhadeep Sarkar, Tarikul Islam Papon Proceedings of the International Workshop on Data Management on New Hardware (DaMoN), 2026 --&gt;">
               <div class="badge badge-pub">DaMoN</div>
               <div class="mt-5 pub-title" align="justify">
                 ZARC: Re-inventing Zone Allocation for LSMs on ZNS SSD
@@ -219,10 +277,50 @@
                 </a> -->
               </div>
             </li>
+            <li class="pub-item" data-year="2026" data-tag="IRAI" data-text="IRAI Fast Retrieval, Unequal Exposure: Evaluating Efficiency and Exposure Bias in Vector-Based Recommender Systems Enock Ayiku, Jain Navkar, Kenneth Fletcher, Tarikul Islam Papon Proceedings of the International Conference on Responsible Artificial Intelligence (IRAI), 2026 --&gt;">
+              <div class="badge badge-pub">IRAI</div>
+              <div class="mt-5 pub-title" align="justify">
+                Fast Retrieval, Unequal Exposure: Evaluating Efficiency and Exposure Bias in Vector-Based Recommender Systems
+              </div>
+              <div class="mt-5 pub-authors" align="justify">
+                Enock Ayiku, Jain Navkar, Kenneth Fletcher, <b>Tarikul Islam Papon</b>
+              </div>
+              <div class="mt-5 pub-venue" align="justify">
+                Proceedings of the International Conference on Responsible Artificial Intelligence (IRAI), 2026
+              </div>
 
-            <h2 class="pub-year">2025</h2>
+              <!-- <div class="pub-links">
+                <a href="PAPER" target="_blank" title="Paper"><i class="fas fa-file-pdf pub-icon"></i></a>
+                <a href="VIDEO" target="_blank" title="Presentation Video"><i class="fab fa-youtube pub-icon"></i></a>
+                <a href="SLIDES" target="_blank" title="Slides"><i class="fas fa-file-powerpoint pub-icon"></i></a>
+                <a href="POSTER" target="_blank" title="Poster"><i class="fas fa-image pub-icon"></i></a>
+                <a href="WEBSITE" target="_blank" title="Project Website"><i class="fas fa-globe pub-icon"></i></a>
+                <a href="GITHUB" target="_blank" title="Source Code"><i class="fab fa-github pub-icon"></i></a>
+              </div> -->
+            </li>
+            <li class="pub-item" data-year="2026" data-tag="DSI" data-text="DSI Beyond Instant Answers: Designing a RAG-Based Educational Chatbot to Help Students Ask Questions, Refine Ideas, and Develop Critical Thinking Rami Huu Huu Nguyen, Funda Durupinar, Tarikul Islam Papon, Christian Calienes Deza, Sun-young Whang Proceedings of the Conference of the Decision Sciences Institute (DSI), 2026 (Abstract) --&gt;">
+              <div class="badge badge-pub">DSI</div>
+              <div class="mt-5 pub-title" align="justify">
+                Beyond Instant Answers: Designing a RAG-Based Educational Chatbot to Help Students Ask Questions, Refine Ideas, and Develop Critical Thinking
+              </div>
+              <div class="mt-5 pub-authors" align="justify">
+                Rami Huu Huu Nguyen, Funda Durupinar, <b>Tarikul Islam Papon</b>, Christian Calienes Deza, Sun-young Whang
+              </div>
+              <div class="mt-5 pub-venue" align="justify">
+                Proceedings of the Conference of the Decision Sciences Institute (DSI), 2026 (Abstract)
+              </div>
 
-            <li class="pub-item">
+              <!-- <div class="pub-links">
+                <a href="PAPER" target="_blank" title="Paper"><i class="fas fa-file-pdf pub-icon"></i></a>
+                <a href="VIDEO" target="_blank" title="Presentation Video"><i class="fab fa-youtube pub-icon"></i></a>
+                <a href="SLIDES" target="_blank" title="Slides"><i class="fas fa-file-powerpoint pub-icon"></i></a>
+                <a href="POSTER" target="_blank" title="Poster"><i class="fas fa-image pub-icon"></i></a>
+                <a href="WEBSITE" target="_blank" title="Project Website"><i class="fas fa-globe pub-icon"></i></a>
+                <a href="GITHUB" target="_blank" title="Source Code"><i class="fab fa-github pub-icon"></i></a>
+              </div> -->
+            </li>
+            <h2 class="pub-year" data-year="2025">2025</h2>
+            <li class="pub-item" data-year="2025" data-tag="SIGMOD" data-text="SIGMOD ACE-in-Action: A Smart DBMS Bufferpool for SSDs Teona Bagashbili, Tarikul Islam Papon, Manos Athanassoulis Proceedings of the ACM SIGMOD Management of Data (PACMMOD), 2025 --&gt;">
               <div class="badge badge-pub">SIGMOD</div>
               <div class="mt-5 pub-title" align="justify">
                 ACE-in-Action: A Smart DBMS Bufferpool for SSDs
@@ -272,10 +370,8 @@
                 </a> -->
               </div>
             </li>
-
-            <h2 class="pub-year">2024</h2>
-
-            <li class="pub-item">
+            <h2 class="pub-year" data-year="2024">2024</h2>
+            <li class="pub-item" data-year="2024" data-tag="SIGMOD" data-text="SIGMOD CAVE: Concurrency-Aware Graph Processing on SSDs Tarikul Islam Papon, Taishan Chen, Shuo Zhang, Manos Athanassoulis Proceedings of the ACM SIGMOD Management of Data (PACMMOD), 2024 --&gt;">
               <div class="badge badge-pub">SIGMOD</div>
               <div class="mt-5 pub-title" align="justify">
                 CAVE: Concurrency-Aware Graph Processing on SSDs
@@ -325,8 +421,7 @@
                 </a> -->
               </div>
             </li>
-
-            <li class="pub-item">
+            <li class="pub-item" data-year="2024" data-tag="TKDE" data-text="TKDE Effortless Locality on Data Systems Using Relational Fabric Tarikul Islam Papon, Ju Hyoung Mun, Konstantinos Karatsenidis, Shahin Roozkhosh, Denis Hoornaert, Ahmed Sanaullah, Ulrich Drepper, Renato Mancuso, Manos Athanassoulis IEEE Transactions on Knowledge and Data Engineering (TKDE), 2024. --&gt;">
               <div class="badge badge-pub">TKDE</div>
               <div class="mt-5 pub-title" align="justify">
                 Effortless Locality on Data Systems Using Relational Fabric
@@ -375,8 +470,7 @@
                 </a> -->
               </div>
             </li>
-
-            <li class="pub-item">
+            <li class="pub-item" data-year="2024" data-tag="ICDE" data-text="ICDE Enhancing Data Systems Performance by Exploiting SSD Concurrency &amp; Asymmetry Tarikul Islam Papon Proceedings of the IEEE International Conference on Data Engineering (ICDE) PhD Symposium, 2024 --&gt;">
               <div class="badge badge-pub">ICDE</div>
               <div class="mt-5 pub-title" align="justify">
                 Enhancing Data Systems Performance by Exploiting SSD Concurrency & Asymmetry
@@ -425,8 +519,8 @@
                 </a> -->
               </div>
             </li>
-
-            <li class="pub-item">
+            <li class="pub-item" data-year="2024" data-tag="HPTS" data-text="HPTS (Under Review) Designing SSD-Conscious Data Systems Tarikul Islam Papon HPTS Workshop, 2024 --&gt;">
+              <div class="badge badge-pub">HPTS</div>
               <div>(Under Review)</div>
               <div class="mt-5 pub-title" align="justify">
                 Designing SSD-Conscious Data Systems
@@ -475,10 +569,8 @@
                 </a> -->
               </div>
             </li>
-
-            <h2 class="pub-year">2023</h2>
-
-            <li class="pub-item">
+            <h2 class="pub-year" data-year="2023">2023</h2>
+            <li class="pub-item" data-year="2023" data-tag="NeurIPS" data-text="NeurIPS Silhouette: Toward Performance-Conscious and Transferable CPU Embeddings Tarikul Islam Papon, Abdul Wasay Workshop on ML for Systems at the Conference on Neural Information Processing Systems (NeurIPS), 2023 --&gt;">
               <div class="badge badge-pub">NeurIPS</div>
               <div class="mt-5 pub-title" align="justify">
                 Silhouette: Toward Performance-Conscious and Transferable CPU Embeddings
@@ -527,8 +619,7 @@
                 </a> -->
               </div>
             </li>
-
-            <li class="pub-item">
+            <li class="pub-item" data-year="2023" data-tag="VLDB" data-text="VLDB On-the-fly Data Transformation in Action Ju Hyoung Mun, Konstantinos Karatsenidis, Tarikul Islam Papon, Shahin Roozkhosh, Denis Hoornaert, Ulrich Drepper, Ahmed Sanaullah, Renato Mancuso, Manos Athanassoulis Proceedings of the VLDB Endowment, 2023 --&gt;">
               <div class="badge badge-pub">VLDB</div>
               <div class="mt-5 pub-title" align="justify">
                 On-the-fly Data Transformation in Action
@@ -577,8 +668,7 @@
                 </a> -->
               </div>
             </li>
-
-            <li class="pub-item">
+            <li class="pub-item" data-year="2023" data-tag="TODS" data-text="TODS Enabling Timely and Persistent Deletion in LSM-Engines Subhadeep Sarkar, Tarikul Islam Papon, Dimitris Staratzis, Zichen Zhu, Manos Athanassoulis ACM Transactions on Database Systems (TODS), 2023 --&gt;">
               <div class="badge badge-pub">TODS</div>
               <div class="mt-5 pub-title" align="justify">
                 Enabling Timely and Persistent Deletion in LSM-Engines
@@ -627,8 +717,7 @@
                 </a> -->
               </div>
             </li>
-
-            <li class="pub-item">
+            <li class="pub-item" data-year="2023" data-tag="ICDE" data-text="ICDE ACEing the Bufferpool Management Paradigm for Modern Storage Devices Tarikul Islam Papon, Manos Athanassoulis Proceedings of the IEEE International Conference on Data Engineering (ICDE), 2023 --&gt;">
               <div class="badge badge-pub">ICDE</div>
               <div class="mt-5 pub-title" align="justify">
                 ACEing the Bufferpool Management Paradigm for Modern Storage Devices
@@ -677,8 +766,7 @@
                 </a> -->
               </div>
             </li>
-
-            <li class="pub-item">
+            <li class="pub-item" data-year="2023" data-tag="ICDE" data-text="ICDE Relational Fabric: Transparent Data Transformation [Vision] Tarikul Islam Papon, Ju Hyoung Mun, Shahin Roozkhosh, Denis Hoornaert, Ahmed Sanaullah, Ulrich Drepper, Renato Mancuso, Manos Athanassoulis Proceedings of the IEEE International Conference on Data Engineering (ICDE), 2023 --&gt;">
               <div class="badge badge-pub">ICDE</div>
               <div class="mt-5 pub-title" align="justify">
                 Relational Fabric: Transparent Data Transformation [Vision]
@@ -727,8 +815,7 @@
                 </a> -->
               </div>
             </li>
-
-            <li class="pub-item">
+            <li class="pub-item" data-year="2023" data-tag="CPS-IoT" data-text="CPS-IoT Software-Shaped Platforms Renato Mancuso, Shahin Roozkhosh, Denis Hoornaert, Ju Hyoung Mun, Tarikul Islam Papon, Manos Athanassoulis Proceedings of the Cyber-Physical Systems and Internet of Things Week (CPS-IoT Week Workshops), 2023 --&gt;">
               <div class="badge badge-pub">CPS-IoT</div>
               <div class="mt-5 pub-title" align="justify">
                 Software-Shaped Platforms
@@ -777,8 +864,7 @@
                 </a> -->
               </div>
             </li>
-
-            <li class="pub-item">
+            <li class="pub-item" data-year="2023" data-tag="EDBT" data-text="EDBT Relational Memory: Native In-Memory Accesses on Rows and Columns Shahin Roozkhosh, Denis Hoornaert, Ju Hyoung Mun, Tarikul Islam Papon, Ahmed Sanaullah, Ulrich Drepper, Renato Mancuso, Manos Athanassoulis Proceedings of the International Conference on Extending Database Technology (EDBT), 2023 --&gt;">
               <div class="badge badge-pub">EDBT</div>
               <div class="mt-5 pub-title" align="justify">
                 Relational Memory: Native In-Memory Accesses on Rows and Columns
@@ -827,10 +913,8 @@
                 </a> -->
               </div>
             </li>
-
-            <h2 class="pub-year">2022</h2>
-
-            <li class="pub-item">
+            <h2 class="pub-year" data-year="2022">2022</h2>
+            <li class="pub-item" data-year="2022" data-tag="DEBull" data-text="DEBull Building Deletion-Compliant Data Systems Manos Athanassoulis, Subhadeep Sarkar, Tarikul Islam Papon, Zichen Zhu, Dimitris Staratzis IEEE Data Engineering Bulletin (IEEE DEBull), 2022 --&gt;">
               <div class="badge badge-pub">DEBull</div>
               <div class="mt-5 pub-title" align="justify">
                 Building Deletion-Compliant Data Systems
@@ -879,8 +963,7 @@
                 </a> -->
               </div>
             </li>
-
-            <li class="pub-item">
+            <li class="pub-item" data-year="2022" data-tag="SNAM" data-text="SNAM UACD: A Local Approach for Identifying the Most Influential Spreaders in Twitter in a Distributed Environment T. M. Tariq Adnan, Md. Saiful Islam, Tarikul Islam Papon, Shourav Nath, Muhammad Abdullah Adnan Social Network Analysis and Mining (SNAM), Springer, 2022 --&gt;">
               <div class="badge badge-pub">SNAM</div>
               <div class="mt-5 pub-title" align="justify">
                 UACD: A Local Approach for Identifying the Most Influential Spreaders in Twitter in a Distributed Environment
@@ -929,10 +1012,8 @@
                 </a> -->
               </div>
             </li>
-
-            <h2 class="pub-year">2021</h2>
-
-            <li class="pub-item">
+            <h2 class="pub-year" data-year="2021">2021</h2>
+            <li class="pub-item" data-year="2021" data-tag="DaMoN" data-text="DaMoN A Parametric I/O Model for Modern Storage Devices Tarikul Islam Papon, Manos Athanassoulis Proceedings of the International Workshop on Data Management on New Hardware (DaMoN), 2021 --&gt;">
               <div class="badge badge-pub">DaMoN</div>
               <div class="mt-5 pub-title" align="justify">
                 A Parametric I/O Model for Modern Storage Devices
@@ -981,8 +1062,7 @@
                 </a> -->
               </div>
             </li>
-
-            <li class="pub-item">
+            <li class="pub-item" data-year="2021" data-tag="CIDR" data-text="CIDR The Need for a New I/O Model Tarikul Islam Papon, Manos Athanassoulis Conference on Innovative Data Systems Research (CIDR), 2021 (Abstract) --&gt;">
               <div class="badge badge-pub">CIDR</div>
               <div class="mt-5 pub-title" align="justify">
                 The Need for a New I/O Model
@@ -1031,10 +1111,8 @@
                 </a> -->
               </div>
             </li>
-
-            <h2 class="pub-year">2020</h2>
-
-            <li class="pub-item">
+            <h2 class="pub-year" data-year="2020">2020</h2>
+            <li class="pub-item" data-year="2020" data-tag="SIGMOD" data-text="SIGMOD Lethe: A Tunable Delete-Aware LSM Engine Subhadeep Sarkar, Tarikul Islam Papon, Dimitris Staratzis, Manos Athanassoulis Proceedings of the 2020 ACM SIGMOD International Conference on Management of Data, 2020">
               <div class="badge badge-pub">SIGMOD</div>
               <div class="mt-5 pub-title" align="justify">
                 Lethe: A Tunable Delete-Aware LSM Engine
@@ -1083,10 +1161,9 @@
                 </a>
               </div>
             </li>
-
-            <h2 class="pub-year">2019</h2>
-
-            <li class="pub-item">
+            <h2 class="pub-year" data-year="2019">2019</h2>
+            <li class="pub-item" data-year="2019" data-tag="Thesis" data-text="Thesis M.Sc. Thesis Design And Development Of A Deep Learning Based Application For Detecting Diabetic Retinopathy Tarikul Islam Papon M.Sc. Engineering Thesis, 2019, Department of CSE, BUET, Bangladesh --&gt;">
+              <div class="badge badge-pub">Thesis</div>
               <div class="badge badge-high">M.Sc. Thesis</div>
               <div class="mt-5 pub-title" align="justify">
                 Design And Development Of A Deep Learning Based Application For Detecting Diabetic Retinopathy
@@ -1135,10 +1212,8 @@
                 </a> -->
               </div>
             </li>
-
-            <h2 class="pub-year">2017</h2>
-
-            <li class="pub-item">
+            <h2 class="pub-year" data-year="2017">2017</h2>
+            <li class="pub-item" data-year="2017" data-tag="EnvSci Journal" data-text="EnvSci Journal Rainwater Harvesting System: An Approach for Optimum Tank Size Design and Assessment of Efficiency Sadia Tamanna Khan, Ashef Ainan Baksh, Tarikul Islam Papon, Muhammad Ashraf Ali International Journal Of Environmental Science and Development, 8(1), 37-43, 2017 --&gt;">
               <div class="badge badge-pub">EnvSci Journal</div>
               <div class="mt-5 pub-title" align="justify">
                 Rainwater Harvesting System: An Approach for Optimum Tank Size Design and Assessment of Efficiency
@@ -1187,10 +1262,8 @@
                 </a> -->
               </div>
             </li>
-
-            <h2 class="pub-year">2015</h2>
-
-            <li class="pub-item">
+            <h2 class="pub-year" data-year="2015">2015</h2>
+            <li class="pub-item" data-year="2015" data-tag="NSysS" data-text="NSysS Non-invasive Heart Rate Measuring Smartphone Applications using On-board Cameras: A Short Survey Tarikul Islam Papon, Ishtiyaque Ahmad, Nazmus Saquib, Ashikur Rahman The 1st International Conference on Networking Systems and Security 2015 (NSysS), January 5-7, 2015, Dhaka, Bangladesh --&gt;">
               <div class="badge badge-pub">NSysS</div>
               <div class="mt-5 pub-title" align="justify">
                 Non-invasive Heart Rate Measuring Smartphone Applications using On-board Cameras: A Short Survey
@@ -1239,8 +1312,7 @@
                 </a> -->
               </div>
             </li>
-
-            <li class="pub-item">
+            <li class="pub-item" data-year="2015" data-tag="NSysS" data-text="NSysS Measurement of Heart Rate Using Photoplethysmography Nazmus Saquib, Tarikul Islam Papon, Ishtiyaque Ahmad, Ashikur Rahman The 1st International Conference on Networking Systems and Security (NSysS), January 5-7, 2015, Dhaka, Bangladesh --&gt;">
               <div class="badge badge-pub">NSysS</div>
               <div class="mt-5 pub-title" align="justify">
                 Measurement of Heart Rate Using Photoplethysmography
@@ -1289,8 +1361,8 @@
                 </a> -->
               </div>
             </li>
-
-            <li class="pub-item">
+            <li class="pub-item" data-year="2015" data-tag="Thesis" data-text="Thesis B.Sc. Thesis Photoplethysmographic Analysis of Optical Signals : A Single Device to Measure All the Vital Signs Tarikul Islam Papon, Nazmus Saquib, Ishtiyaque Ahmad B.Sc. Engineering Thesis, 2015, Department of CSE, BUET, Bangladesh --&gt;">
+              <div class="badge badge-pub">Thesis</div>
               <div class="badge badge-high">B.Sc. Thesis</div>
               <div class="mt-5 pub-title" align="justify">
                 Photoplethysmographic Analysis of Optical Signals : A Single Device to Measure All the Vital Signs
@@ -1359,6 +1431,55 @@
   document.getElementById('hamburger').addEventListener('click', () => {
     document.getElementById('navLinks').classList.toggle('open');
   });
+</script>
+<script>
+  // ── Publications: live search + year / venue filters ──
+  (function () {
+    const search = document.getElementById('pubSearch');
+    const yearSel = document.getElementById('pubYear');
+    const tagSel  = document.getElementById('pubTag');
+    const clear   = document.getElementById('pubClear');
+    const count   = document.getElementById('pubCount');
+    if (!search) return;
+
+    const items    = Array.from(document.querySelectorAll('.pub-item'));
+    const headings = Array.from(document.querySelectorAll('.pub-year'));
+
+    function apply() {
+      const q    = search.value.trim().toLowerCase();
+      const year = yearSel.value;
+      const tag  = tagSel.value;
+      let shown  = 0;
+
+      items.forEach(li => {
+        const ok =
+          (!year || li.dataset.year === year) &&
+          (!tag  || li.dataset.tag  === tag)  &&
+          (!q    || (li.dataset.text || '').toLowerCase().includes(q));
+        li.hidden = !ok;
+        if (ok) shown++;
+      });
+
+      // Hide a year heading when nothing under it survived the filter.
+      headings.forEach(h => {
+        h.hidden = !items.some(li => li.dataset.year === h.dataset.year && !li.hidden);
+      });
+
+      const filtering = q || year || tag;
+      count.textContent = filtering
+        ? `${shown} of ${items.length} publication${items.length === 1 ? '' : 's'}`
+        : `${items.length} publications`;
+      clear.hidden = !filtering;
+    }
+
+    search.addEventListener('input', apply);
+    yearSel.addEventListener('change', apply);
+    tagSel.addEventListener('change', apply);
+    clear.addEventListener('click', () => {
+      search.value = ''; yearSel.value = ''; tagSel.value = ''; apply(); search.focus();
+    });
+    apply();
+  })();
 </script>
 </body>
 </html>

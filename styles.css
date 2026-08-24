@@ -477,6 +477,62 @@
     }
     .contact-value { font-size: 14px; color: var(--ink); }
 
+    /* ── Publications: search + filters ────────────────────────── */
+    .pub-filters {
+      display: flex; flex-wrap: wrap; align-items: center; gap: 10px;
+      margin: 0 0 26px;
+    }
+    .pub-search { position: relative; flex: 1 1 320px; min-width: 240px; }
+    .pub-search-icon {
+      position: absolute; left: 12px; top: 50%; transform: translateY(-50%);
+      font-size: 13px; opacity: 0.5; pointer-events: none;
+    }
+    .pub-search input {
+      width: 100%; padding: 9px 12px 9px 34px;
+      font-family: inherit; font-size: 14px; color: var(--ink);
+      background: var(--white);
+      border: 1px solid var(--border); border-radius: 8px;
+      transition: border-color 0.15s, box-shadow 0.15s;
+      -webkit-appearance: none; appearance: none;
+    }
+    .pub-search input:focus {
+      outline: none; border-color: var(--accent2);
+      box-shadow: 0 0 0 3px var(--accent-glow);
+    }
+    .pub-filters select {
+      padding: 9px 30px 9px 12px;
+      font-family: inherit; font-size: 14px; color: var(--ink);
+      background: var(--white) url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath fill='%236b7c93' d='M1 1.5 6 6.5l5-5'/%3E%3C/svg%3E") no-repeat right 11px center/11px 7px;
+      border: 1px solid var(--border); border-radius: 8px;
+      cursor: pointer; -webkit-appearance: none; appearance: none;
+      transition: border-color 0.15s;
+    }
+    .pub-filters select:hover { border-color: var(--accent); }
+    .pub-filters select:focus {
+      outline: none; border-color: var(--accent2);
+      box-shadow: 0 0 0 3px var(--accent-glow);
+    }
+    .pub-clear {
+      padding: 9px 15px;
+      font-family: inherit; font-size: 13.5px; font-weight: 500;
+      color: var(--ink-soft); background: none;
+      border: 1px solid var(--border); border-radius: 8px;
+      cursor: pointer; transition: 0.15s;
+    }
+    .pub-clear:hover { border-color: var(--accent); color: var(--accent); }
+    .pub-clear[hidden] { display: none; }
+    .pub-count {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px; color: var(--ink-muted); margin-left: auto;
+      white-space: nowrap;
+    }
+    .pub-item[hidden], .pub-year[hidden] { display: none; }
+
+    @media (max-width: 620px) {
+      .pub-filters select, .pub-clear { flex: 1 1 auto; }
+      .pub-count { margin-left: 0; width: 100%; }
+    }
+
     /* ── Publications ──────────────────────────────────────────── */
     .pub-item {
       padding: 10px 0;
