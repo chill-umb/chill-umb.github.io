@@ -59,6 +59,13 @@
     .nav-brand-logo img {
       width: 100%; height: 100%; object-fit: contain; display: block;
     }
+    .nav-umb {
+      display: flex; align-items: center; flex-shrink: 0;
+      padding-left: 14px; margin-left: 4px;
+      border-left: 1px solid var(--border);
+    }
+    .nav-umb img { height: 30px; width: auto; display: block; }
+    .nav-umb:hover { opacity: 0.75; }
     .nav-links {
       display: flex; align-items: center; gap: 4px; margin-left: auto;
     }
@@ -590,6 +597,8 @@
         top: var(--nav-h); left: 0; right: 0; background: white;
         padding: 12px 20px; border-bottom: 1px solid var(--border); gap: 2px; }
       .nav-links.open { display: flex; }
+      .nav-umb { padding-left: 10px; margin-left: 2px; }
+      .nav-umb img { height: 24px; }
       .hamburger { display: block; margin-left: auto; }
       .hero-inner { grid-template-columns: 1fr; }
       .hero-banner-img { display: none; }
