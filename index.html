@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=4" />
 </head>
 <body>
 
@@ -18,7 +18,7 @@
   <div class="nav-inner">
     <a class="nav-brand" href="index.html">
       <div class="nav-brand-logo">
-        <img src="images/logo-mark.png" alt="CHiLL Lab logo" />
+        <img src="images/lab_logo_black.png" alt="CHiLL Lab logo" />
       </div>
     </a>
     <button class="hamburger" id="hamburger" aria-label="Menu">
@@ -269,86 +269,62 @@
     <h2 class="section-title">Team Members</h2>
     <div class="divider"></div>
 
-    <div class="members-grid members-row-lead">
+    <div class="members-grid">
 
       <div class="member-card">
-        <div class="member-avatar">
-          <img src="images/people/papon.jpg" alt="Tarikul Islam Papon">
-        </div>
-        <div class="member-name">
-          <a href="https://www.cs.umb.edu/~tpapon/" target="_blank">Tarikul Islam Papon</a>
-        </div>
+        <div class="member-avatar"><img src="images/people/papon.jpg" alt="Tarikul Islam Papon"></div>
+        <div class="member-name"><a href="https://www.cs.umb.edu/~tpapon/" target="_blank">Tarikul Islam Papon</a></div>
         <div class="member-role">PI &amp; Lab Director</div>
       </div>
-
       <div class="member-card">
-        <div class="member-avatar">
-          <img src="images/people/sse.jpeg" alt="Shadman Saqib Eusuf">
-        </div>
-        <div class="member-name">
-          <a href="https://s-saqib.github.io/" target="_blank">Shadman Saqib Eusuf</a>
-        </div>
+        <div class="member-avatar"><img src="images/people/sse.jpeg" alt="Shadman Saqib Eusuf"></div>
+        <div class="member-name"><a href="https://s-saqib.github.io/" target="_blank">Shadman Saqib Eusuf</a></div>
         <div class="member-role">PhD Student</div>
       </div>
-
       <div class="member-card">
         <div class="member-avatar">A</div>
-        <div class="member-name">
-          <a href="https://aroma058.github.io/" target="_blank">Aroma Hoque</a>
-        </div>
+        <div class="member-name"><a href="https://aroma058.github.io/" target="_blank">Aroma Hoque</a></div>
         <div class="member-role">PhD Student</div>
       </div>
-
-    </div>
-
-    <div class="members-grid members-grid-rest">
-
-      <div class="member-card">
-        <div class="member-avatar">R</div>
-        <div class="member-name">Rami Huu Huu Nguyen</div>
-        <div class="member-role">Graduate Researcher</div>
-      </div>
-
-      <div class="member-card">
-        <div class="member-avatar">E</div>
-        <div class="member-name">Enock Okorno Ayiku</div>
-        <div class="member-role">Graduate Researcher</div>
-      </div>
-
       <div class="member-card">
         <div class="member-avatar">F</div>
         <div class="member-name">Farhan S. Chowdhury</div>
         <div class="member-role">Remote Graduate Intern</div>
       </div>
-
-      <div class="member-card">
-        <div class="member-avatar">A</div>
-        <div class="member-name">Anindya Hoque</div>
-        <div class="member-role">Remote Graduate Intern</div>
-      </div>
-
       <div class="member-card">
         <div class="member-avatar">S</div>
         <div class="member-name">Saffat Zabin</div>
         <div class="member-role">Remote Graduate Intern</div>
       </div>
-
+      <div class="member-card">
+        <div class="member-avatar">A</div>
+        <div class="member-name">Anindya Hoque</div>
+        <div class="member-role">Remote Graduate Intern</div>
+      </div>
       <div class="member-card">
         <div class="member-avatar">A</div>
         <div class="member-name">Anwarul Bashir Shuaib</div>
         <div class="member-role">Remote Graduate Intern</div>
       </div>
-
+      <div class="member-card">
+        <div class="member-avatar">R</div>
+        <div class="member-name">Rami Huu Huu Nguyen</div>
+        <div class="member-role">Graduate Researcher</div>
+      </div>
       <div class="member-card">
         <div class="member-avatar">A</div>
         <div class="member-name">Ahtashamul Haque</div>
         <div class="member-role">Remote Graduate Intern</div>
       </div>
-
       <div class="member-card">
         <div class="member-avatar">S</div>
         <div class="member-name">Sayjad Rahman</div>
         <div class="member-role">Remote Graduate Intern</div>
+      </div>
+      <div class="member-card">
+        <div class="member-avatar">E</div>
+        <div class="member-name">Enock Okorno Ayiku</div>
+        <div class="member-role">Graduate Researcher</div>
       </div>
 
     </div>
@@ -365,52 +341,24 @@
 
       <div class="class-item">
         <div class="class-code">CS 434 / CS 634</div>
-        <div class="class-title">Architecture of Database Systems</div>
-        <p class="class-desc">
-          The internals of a database kernel: indexing and query optimization, database update
-          programming, and the ACID properties. The course covers concurrency theory
-          (serializability, two-phase locking, deadlock detection), transactional recovery through
-          REDO/UNDO logging and checkpointing, transactional performance analysis, distributed
-          databases and two-phase commit, and database parallelism.
-        </p>
-        <div class="class-meta">
-          Instructor: <a href="https://www.cs.umb.edu/~tpapon/" target="_blank">Tarikul Islam Papon</a>
-          &nbsp;·&nbsp;
-          <span class="class-terms"><a href="https://www.cs.umb.edu/~tpapon/cs434-634/" target="_blank">[Fall 2026]</a></span>
-        </div>
+        <h3 class="class-title">Architecture of Database Systems</h3>
+        <p class="class-desc">The internals of a database kernel: indexing and query optimization, database update programming, and the ACID properties. The course covers concurrency theory (serializability, two-phase locking, deadlock detection), transactional recovery through REDO/UNDO logging and checkpointing, transactional performance analysis, distributed database systems and two-phase commit, and database parallelism.</p>
+        <div class="class-line"><b>Instructor:</b> <a href="https://www.cs.umb.edu/~tpapon/" target="_blank">Tarikul Islam Papon</a></div>
+        <div class="class-line"><b>Class Website:</b> <a href="https://www.cs.umb.edu/~tpapon/cs434-634/" target="_blank">Fall 2026</a></div>
       </div>
-
       <div class="class-item">
         <div class="class-code">CS 436 / CS 636</div>
-        <div class="class-title">Database Application Development</div>
-        <p class="class-desc">
-          Building database applications — software systems that solve real-world problems while
-          storing their data in relational databases behind practical user interfaces. Topics
-          include system specification from user needs, data-flow and work-flow analysis, object
-          design, database design, client–server techniques and rapid prototyping. Students work in
-          teams on a real project through the term.
-        </p>
-        <div class="class-meta">
-          Instructor: <a href="https://www.cs.umb.edu/~tpapon/" target="_blank">Tarikul Islam Papon</a>
-          &nbsp;·&nbsp;
-          <span class="class-terms"><a href="https://www.cs.umb.edu/~tpapon/cs436-636/" target="_blank">[Spring 2026]</a></span>
-        </div>
+        <h3 class="class-title">Database Application Development</h3>
+        <p class="class-desc">Database applications are software systems that solve real-world problems while storing their data in relational databases behind practical user interfaces. Topics include system specification from user needs, analysis of data flow and work flow, object design, database design, client&ndash;server techniques, and rapid prototyping. Students work in teams on a real project through the term.</p>
+        <div class="class-line"><b>Instructor:</b> <a href="https://www.cs.umb.edu/~tpapon/" target="_blank">Tarikul Islam Papon</a></div>
+        <div class="class-line"><b>Class Website:</b> <a href="https://www.cs.umb.edu/~tpapon/cs436-636/" target="_blank">Spring 2026</a></div>
       </div>
-
       <div class="class-item">
         <div class="class-code">CS 187</div>
-        <div class="class-title">Computer Science Gateway Seminar I</div>
-        <p class="class-desc">
-          A seminar on technology — in particular information technology — and how it relates to our
-          lives. Students read both fiction and non-fiction in which technology is at issue and
-          discuss it in written and oral work, individually and in small groups, with the goal of
-          understanding the social implications of computing.
-        </p>
-        <div class="class-meta">
-          Instructor: <a href="https://www.cs.umb.edu/~tpapon/" target="_blank">Tarikul Islam Papon</a>
-          &nbsp;·&nbsp;
-          <span class="class-terms">[Fall 2026] [Fall 2025]</span>
-        </div>
+        <h3 class="class-title">Computer Science Gateway Seminar I</h3>
+        <p class="class-desc">A seminar on technology &mdash; in particular information technology &mdash; and how it relates to our lives. Students read both fiction and non-fiction in which technology is at issue and discuss it in written and oral work, individually and in small groups. The goal is to understand the many facets of information technology and its social implications.</p>
+        <div class="class-line"><b>Instructor:</b> <a href="https://www.cs.umb.edu/~tpapon/" target="_blank">Tarikul Islam Papon</a></div>
+        <div class="class-line"><b>Class Website:</b> Fall 2026, Fall 2025</div>
       </div>
 
     </div>
@@ -446,24 +394,12 @@
             <div class="contact-value"><a href="mailto:t.papon@umb.edu">t.papon@umb.edu</a></div>
           </div>
         </div>
-
-        <div class="contact-item">
-          <div class="contact-icon">🎓</div>
-          <div>
-            <div class="contact-label">Join Us</div>
-            <div class="contact-value">
-              We are always looking for motivated students interested in data systems and
-              storage hardware. Email Papon with your CV and a short note about what you would
-              like to work on.
-            </div>
-          </div>
-        </div>
       </div>
 
       <div>
         <div class="map-frame">
           <iframe
-            src="https://www.google.com/maps?q=McCormack%20Hall%2C%20University%20of%20Massachusetts%20Boston%2C%20100%20Morrissey%20Blvd%2C%20Boston%2C%20MA%2002125&output=embed"
+            src="https://www.google.com/maps?q=McCormack%20Hall%2C%20University%20of%20Massachusetts%20Boston%2C%20100%20Morrissey%20Blvd%2C%20Boston%2C%20MA%2002125&amp;output=embed"
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
             title="CHiLL Lab location — McCormack Hall, UMass Boston"
