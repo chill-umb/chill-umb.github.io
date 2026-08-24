@@ -4,7 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CHiLL — Computing Hardware & Large Data Lab @ UMass Boston</title>
-  <link rel="icon" type="image/png" href="images/logo.jpg" />
+  <link rel="icon" type="image/png" sizes="96x96" href="images/favicon.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -18,20 +19,20 @@
   <div class="nav-inner">
     <a class="nav-brand" href="index.html">
       <div class="nav-brand-logo">
-        <img src="images/logo-gray.png" alt="CHiLL" />
+        <img src="images/logo-mark.png" alt="CHiLL Lab logo" />
       </div>
     </a>
     <button class="hamburger" id="hamburger" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
     <div class="nav-links" id="navLinks">
-      <a href="index.html" class="active">Home</a>
+      <a href="index.html">Home</a>
       <a href="index.html#news">News</a>
       <a href="index.html#research">Research</a>
       <a href="index.html#team">Team</a>
       <a href="index.html#classes">Classes</a>
-      <a href="index.html#contact">Contact</a>
-      <a href="publications.html" class="nav-cv">Publications</a>
+      <a href="index.html#find-us">Find Us</a>
+      <a href="publications.html" class="nav-cv active">Publications</a>
     </div>
   </div>
 </nav>
@@ -1349,38 +1350,14 @@
 
 <!-- ─── Footer ─────────────────────────────────────────────────── -->
 <footer class="footer">
-  <p>© 2026 CHiLL · <a href="https://www.cs.umb.edu/">Department of Computer Science, UMass Boston</a></p>
-  <p style="margin-top:6px;">Led by <a href="https://www.cs.umb.edu/~tpapon/">Tarikul Islam Papon</a></p>
+  <p>© 2026 Tarikul Islam Papon · CHiLL — Computing Hardware &amp; Large Data Lab</p>
+  <p style="margin-top:6px;"><a href="https://www.cs.umb.edu/">Department of Computer Science</a>, University of Massachusetts Boston</p>
 </footer>
 
 <script>
   // Mobile nav toggle
   document.getElementById('hamburger').addEventListener('click', () => {
     document.getElementById('navLinks').classList.toggle('open');
-  });
-
-  // News expand/collapse
-  function toggleNews() {
-    const extra = document.getElementById('oldNews');
-    const btn = document.getElementById('newsToggle');
-    if (extra.classList.contains('visible')) {
-      extra.classList.remove('visible');
-      btn.textContent = 'Show all news';
-    } else {
-      extra.classList.add('visible');
-      btn.textContent = 'Show fewer';
-    }
-  }
-
-  // Active nav on scroll
-  const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
-  window.addEventListener('scroll', () => {
-    let curr = '';
-    sections.forEach(s => { if (window.scrollY >= s.offsetTop - 80) curr = s.id; });
-    navLinks.forEach(a => {
-      a.classList.toggle('active', a.getAttribute('href') === '#' + curr);
-    });
   });
 </script>
 </body>
