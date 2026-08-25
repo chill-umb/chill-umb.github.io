@@ -140,17 +140,11 @@
       color: rgba(255,255,255,0.85);
       padding: 6px 15px; border-radius: 20px;
     }
-    .hero-banner-img {
-      border-radius: 12px; overflow: hidden;
-      box-shadow: 0 24px 60px rgba(0,0,0,0.4);
-      max-width: 340px; width: 100%;
-    }
 
     /* ── Section Wrappers ──────────────────────────────────────── */
     .section { padding: 22px 28px; scroll-margin-top: calc(var(--nav-h) + 16px); }
     section[id], [id] { scroll-margin-top: calc(var(--nav-h) + 16px); }
     .section-alt { background: var(--white); }
-    .section-dark { background: var(--ink); }
     .container { max-width: 1160px; margin: 0 auto; }
     .section-label {
       font-family: 'JetBrains Mono', monospace;
@@ -163,66 +157,10 @@
       font-size: clamp(1.6rem, 2.8vw, 2.2rem);
       color: var(--ink); margin-bottom: 36px; line-height: 1.2;
     }
-    .section-dark .section-title { color: white; }
     .divider {
       width: 48px; height: 3px; border-radius: 2px;
       background: var(--accent2); margin-bottom: 28px;
     }
-
-    /* ── Profile / About ───────────────────────────────────────── */
-    .about-grid {
-      display: grid; grid-template-columns: 240px 1fr;
-      gap: 48px; align-items: start;
-    }
-    .profile-card {
-      text-align: center;
-    }
-    .profile-photo {
-      width: 200px; height: 200px; object-fit: cover;
-      border-radius: 50%;
-      border: 4px solid var(--surface);
-      box-shadow: 0 8px 32px rgba(0,0,0,0.12);
-      margin-bottom: 16px;
-    }
-    .profile-name {
-      font-family: 'DM Serif Display', serif;
-      font-size: 1.25rem; margin-bottom: 4px;
-    }
-    .profile-role {
-      font-size: 13px; color: var(--ink-muted); margin-bottom: 14px;
-    }
-    .social-links {
-      display: flex; justify-content: center; gap: 12px; flex-wrap: wrap;
-    }
-    .social-link {
-      display: inline-flex; align-items: center; gap: 5px;
-      font-size: 12.5px; font-weight: 500;
-      color: var(--ink-soft); text-decoration: none;
-      border: 1px solid var(--border); border-radius: 6px;
-      padding: 5px 10px; transition: 0.15s;
-    }
-    .social-link:hover {
-      border-color: var(--accent); color: var(--accent);
-      text-decoration: none; background: var(--accent-glow);
-    }
-    .about-content p { color: var(--ink-soft); margin-bottom: 16px; }
-    .exp-list { margin-top: 24px; }
-    .exp-list h3 {
-      font-size: 14px; font-weight: 600; text-transform: uppercase;
-      letter-spacing: 0.06em; color: var(--ink-muted);
-      margin-bottom: 12px;
-    }
-    .exp-item {
-      display: flex; gap: 14px; padding: 10px 0;
-      border-bottom: 1px solid var(--border);
-    }
-    .exp-item:last-child { border-bottom: none; }
-    .exp-dot {
-      width: 8px; height: 8px; border-radius: 50%;
-      background: var(--accent2); flex-shrink: 0; margin-top: 7px;
-    }
-    .exp-title { font-size: 13.5px; font-weight: 500; }
-    .exp-sub { font-size: 12px; color: var(--ink-muted); }
 
     /* ── Research ──────────────────────────────────────────────── */
     .research-intro {
@@ -306,23 +244,6 @@
     .project-card-link:hover { color: var(--accent2); text-decoration: none; }
 
     /* ── Members ───────────────────────────────────────────────── */
-    .team-category {
-      color: rgba(55,55,55,0.7);
-      text-transform: uppercase;
-      letter-spacing: 0.15em;
-      font-size: 13px;
-      margin-bottom: 24px;
-    }
-
-    .students-heading {
-      margin-top: 60px;
-    }
-
-    .faculty-grid {
-      display: flex;
-      justify-content: center;
-    }
-
     /* Four cards per row, centred; a short final row stays centred too. */
     .members-grid {
       display: flex;
@@ -332,12 +253,6 @@
       gap: 26px;
       max-width: 1010px;
       margin: 0 auto;
-    }
-    .team-subhead {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 11px; font-weight: 500; letter-spacing: 0.1em;
-      text-transform: uppercase; color: var(--accent2);
-      text-align: center; margin-bottom: 18px; display: block;
     }
 
     .member-card {
@@ -364,10 +279,6 @@
           0 0 40px rgba(0,153,204,0.08);
     }
 
-    .faculty-card {
-      width: 202px !important;
-    }
-
     .member-avatar {
       width: 100%;
       height: 226px;
@@ -387,12 +298,6 @@
       font-weight: 700;
       font-family: 'DM Serif Display', serif;
       color: rgba(255,255,255,0.92);
-    }
-
-    .faculty-avatar {
-      width: 200px !important;
-      height: 200px !important;
-      border-radius: 22px 22px 0% 0% !important;
     }
 
     .member-avatar img {
@@ -601,9 +506,5 @@
       .nav-umb img { height: 24px; }
       .hamburger { display: block; margin-left: auto; }
       .hero-inner { grid-template-columns: 1fr; }
-      .hero-banner-img { display: none; }
-      .about-grid { grid-template-columns: 1fr; }
-      .profile-card { display: flex; align-items: center; gap: 20px; text-align: left; }
-      .social-links { justify-content: flex-start; }
       .contact-grid { grid-template-columns: 1fr; }
     }
