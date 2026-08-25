@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=13" />
+  <link rel="stylesheet" href="styles.css?v=15" />
 </head>
 <body>
 
@@ -158,10 +158,29 @@
       <div class="project-card">
         <div class="project-card-header"></div>
         <div class="project-card-body">
-          <div class="project-card-title">UniZNS: Optimizing LSM Compactions for ZNS SSDs</div>
-          <img src="images/projects/unizns.png" alt="UniZNS" style="width:100%; border-radius:6px;">
-          <p class="project-card-text">UniZNS integrates any file placement, garbage collection, and zone allocation policies to identify the best combinations across different LSM compaction strategies and workloads.</p>
+          <div class="project-card-title">Optimizing LSM Tree&rsquo;s Block Cache</div>
+          <p class="project-card-text">We revisit how an LSM engine allocates and manages its block cache, so that memory is spent where it actually reduces read cost.</p>
           <span class="project-card-link" style="color:var(--ink-muted); cursor:default;">Coming Soon</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-card-header"></div>
+        <div class="project-card-body">
+          <div class="project-card-title">DB Buffer Pool Analysis</div>
+          <img src="images/projects/bufbench_arch.png" alt="BufBench" style="width:100%; border-radius:6px;">
+          <p class="project-card-text">BufBench is an open-source benchmarking framework that exposes what a PostgreSQL buffer pool is really doing across a range of workloads, including page eviction, buffer utilization, and background process interference.</p>
+          <a class="project-card-link" href="https://github.com/chill-umb/BufBench" target="_blank">Learn more &rarr;</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-card-header"></div>
+        <div class="project-card-body">
+          <div class="project-card-title">ZARC: Optimizing Zone Allocation for LSMs on ZNS SSD</div>
+          <img src="images/projects/unizns.png" alt="ZARC" style="width:100%; border-radius:6px;">
+          <p class="project-card-text">ZARC integrates any file placement, garbage collection, and zone allocation policies to identify the best combinations across different LSM compaction strategies and workloads.</p>
+          <a class="project-card-link" href="https://github.com/chill-umb/PLAZA" target="_blank">Learn more &rarr;</a>
         </div>
       </div>
 
