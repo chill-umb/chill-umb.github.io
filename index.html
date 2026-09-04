@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=17" />
+  <link rel="stylesheet" href="styles.css?v=18" />
 </head>
 <body>
 
@@ -32,6 +32,7 @@
       <a href="index.html#news">News</a>
       <a href="index.html#research">Research</a>
       <a href="index.html#team">Team</a>
+      <a href="index.html#gallery">Gallery</a>
       <a href="index.html#classes">Classes</a>
       <a href="index.html#find-us">Find Us</a>
       <a href="publications.html" class="nav-cv">Publications</a>
@@ -316,6 +317,91 @@
   </div>
 </section>
 
+<!-- ─── Gallery ─────────────────────────────────────────────── -->
+<section class="section section-alt" id="gallery">
+  <div class="container">
+    <h2 class="section-title">Gallery</h2>
+    <div class="divider"></div>
+
+    <div class="gallery">
+      <div class="gallery-stage">
+        <button class="gallery-arrow gallery-prev" type="button" aria-label="Previous photo">&lsaquo;</button>
+        <div class="gallery-frame">
+          <img id="galleryMain" src="images/gallery/nedb_day26.jpeg" alt="CHiLL at NEDB Day 2026" />
+        </div>
+        <button class="gallery-arrow gallery-next" type="button" aria-label="Next photo">&rsaquo;</button>
+      </div>
+      <p class="gallery-caption" id="galleryCaption"></p>
+      <div class="gallery-thumbs" id="galleryThumbs"></div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // ── Gallery: one main photo, prev/next arrows, thumbnail strip ──
+  // To add a photo: drop the file in images/gallery/ and add a line below.
+  (function () {
+    const PHOTOS = [
+      { src: 'images/gallery/nedb_day26.jpeg', caption: 'CHiLL @ NEDB Day 2026, UMass Boston — January 2026' },
+      { src: 'images/gallery/vldb26-1.jpg', caption: 'Aroma presenting BufBench @ VLDB 2026, Boston - Sept 2026' },
+      { src: 'images/gallery/vldb26-2.jpg', caption: 'Shadman and Tianru demonstrating ReStore @ VLDB 2026, Boston - Sept 2026' },
+      { src: 'images/gallery/vldb26-3.jpg', caption: 'DiSC Lab from BU, SSD Lab from Brandeis and CHiLL from UMB @ VLDB 2026, Boston - Sept 2026' },
+      { src: 'images/gallery/vldb26-4.jpg', caption: 'CHiLL @ VLDB 2026, Boston - Sept 2026' },
+    ];
+
+    const root = document.getElementById('gallery');
+    if (!root || !PHOTOS.length) return;
+
+    const mainEl   = document.getElementById('galleryMain');
+    const capEl    = document.getElementById('galleryCaption');
+    const thumbsEl = document.getElementById('galleryThumbs');
+    const prevBtn  = root.querySelector('.gallery-prev');
+    const nextBtn  = root.querySelector('.gallery-next');
+    let idx = 0;
+
+    PHOTOS.forEach((p, i) => {
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'gallery-thumb';
+      btn.setAttribute('aria-label', 'Show photo ' + (i + 1) + ' of ' + PHOTOS.length);
+      const im = document.createElement('img');
+      im.src = p.src;
+      im.alt = p.caption || '';
+      im.loading = 'lazy';
+      btn.appendChild(im);
+      btn.addEventListener('click', () => show(i));
+      thumbsEl.appendChild(btn);
+    });
+    const thumbs = Array.from(thumbsEl.children);
+
+    function show(i) {
+      idx = (i + PHOTOS.length) % PHOTOS.length;
+      const p = PHOTOS[idx];
+      mainEl.src = p.src;
+      mainEl.alt = p.caption || '';
+      capEl.textContent = p.caption || '';
+      thumbs.forEach((t, k) => t.classList.toggle('active', k === idx));
+    }
+
+    prevBtn.addEventListener('click', () => show(idx - 1));
+    nextBtn.addEventListener('click', () => show(idx + 1));
+
+    // Left/right keys once something inside the gallery has focus.
+    root.addEventListener('keydown', e => {
+      if (e.key === 'ArrowLeft')  { e.preventDefault(); show(idx - 1); }
+      if (e.key === 'ArrowRight') { e.preventDefault(); show(idx + 1); }
+    });
+
+    if (PHOTOS.length < 2) {
+      prevBtn.hidden = true;
+      nextBtn.hidden = true;
+      thumbsEl.hidden = true;
+    }
+
+    show(0);
+  })();
+</script>
+
 <!-- ─── Classes ────────────────────────────────────────────────── -->
 <section class="section section-alt" id="classes">
   <div class="container">
@@ -370,7 +456,7 @@
           <div>
             <div class="contact-label">Lab &amp; Office</div>
             <div class="contact-value">
-              McCormack Hall, 3rd Floor, M-3-201-28<br/>
+              McCormack Hall, 3rd Floor, M-3-201-25<br/>
               Department of Computer Science<br/>
               University of Massachusetts Boston<br/>
               100 Morrissey Boulevard<br/>
